@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的资产</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/myassets.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/myassets_main");
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav " style="border: none !important;">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的资产</h1>
+		<!--<button class="mui-pull-right recharge c_fff dis_block bg_ff7" id="recharge" style="margin-top: 0.8rem;border: none;">充值提现</button>-->
+	</header>
+	<div class="mui-content" style="z-index: 99999;" >
+		<div class="total tc bg_ff7" id="total" style="border-bottom: 1px solid #ccc;">
+			<img src="../../../public/img/header.png" alt="头像" width="20%"/>
+			<p style="margin-top: 1rem;"><span class="mui-icon "></span><span class="f18 c_fff">总资产（元）</span></p>
+			<p class="tc" ><span  class="c_fff f18" id="totalAssets"></span></p>
+		</div>
+		<div style="margin-top: 0rem;">
+			<div class="acountInfo clearfix"> 
+				<div class="mui-pull-left tc bg_ff7" >
+					<p class="c_fff f18"><span class="mui-icon "></span><span class="">可用余额（元）</span></p>
+					<p class="c_ff6 f18" id="availableMoney"></p>
+				</div>
+				<div class="mui-pull-left tc bg_ff7" >
+					<p class="c_fff f18"><span class="mui-icon "></span><span class="">累计收益（元）</span></p>
+					<p class="c_ff6 f18" id="waitMoney"></p>	
+				</div>
+			</div>
+			<div class="tc withdraw">
+				<p class="f18 c_696"><span class="mui-icon "></span><span class="">本月可免费提现金额（元）</span></p>
+				<p class="c_ff6 " id="free">0.00</p>
+			</div>
+			<div class="btn tc">
+				<button class="mui-btn bg_ff6 c_fff" id="recharge">充值</button>
+				<button class="mui-btn bg_ff6 c_fff" id="draw">提现</button>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

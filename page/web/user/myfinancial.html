@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的投资列表</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/myfinancial.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		
+      		seajs.use("../../../public/js/application/myfinancial");
+      	})
+    </script>
+</head>
+<body>     
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的理财金</h1>
+		<!--<button class="mui-pull-right  c_fff bg_ff7" style="margin-top: 0.5rem;border: none;" id="recharge">投资记录</button>-->
+	</header>  
+	<div class="mui-content clearfix">
+		<div id="ext_Cover" style="position: absolute;z-index: 999;top: 0;padding: 0 5%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+					<div class="tc" style="width:18rem;;margin: 65% auto;padding:1rem 0;background:#fff;border-radius:5px ;">
+						<h4 style="color:#ff7f00;margin-bottom: 0.6rem;">激活条件</h4>
+						<p style="margin-top:1rem" id="activeRuler">亲,真的要离开吗?</p> 
+							<div style="margin-top:1rem">
+								<button id="sure_Btn" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">确定</button>
+								<!--<button id="cancel_Btn" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>-->
+							</div> 
+					</div> 
+			</div> 
+		<div class="menu mui-bar tc" style="margin-top: 0rem;padding: 0;">
+			<span class="status standBy" id="standBy" status =0>待激活</span>
+			<span class="status already" status =1>可投资</span>
+			<span class="status profit" status =2>收益中</span>
+			<span class="status finacial" status =3>理财金收益</span>
+		</div>             
+		<!--图文列表-->         
+	    <div id="good-list" style="margin-top: 6.8rem;height: 100%; " class="mui-scroll-wrapper">
+	    	<!--待激活-->   
+	    	<div id="standBox">
+	    		
+	    		
+	    		
+	    		<div class="standByTitle bg_f clearfix" >
+	    		<span class="c_333">待激活理财金（元）</span><span class="mui-pull-right c_ff6" id="standMoney">0</span>
+		    	</div>
+				<div class="mui-scroll" >  
+					<!--数据列表-->
+					<ul id="box3" class="mui-table-view" style="background: #fff;">
+						<!--<li class="mui-table-view-cell info">
+							<div class="clearfix">
+								<h5 class="c_333 f18 mui-pull-left">新用户注册赠送</h5>
+								<span class="newUserMoney mui-pull-right">￥1000</span>
+							</div>
+							<div>
+								<h5 class="f12 mui-pull-left">首次单笔充值满1000可激活</h5>
+								<span class="timeout mui-pull-right f12">2016-01-10 00:00 <span>过期</span></span>
+							</div>
+						</li>
+						<li class="mui-table-view-cell info">
+							<div class="clearfix">
+								<h5 class="c_333 f18 mui-pull-left">新用户注册赠送</h5>
+								<span class="newUserMoney mui-pull-right">￥1000</span>
+							</div>             
+							<div>
+								<h5 class="f12 mui-pull-left">首次单笔充值满1000可激活</h5>
+								<span class="timeout mui-pull-right f12">2016-01-10 00:00 <span>过期</span></span>
+							</div>   
+						</li>--> 
+					</ul>
+					<span class="mui-pull-right look">查看已过期理财金>></span>
+				</div>
+			</div>
+			<!--已激活-->
+			<div id="alreadyBox" style="display: none;"  >
+	    		<div class="standByTitle bg_f clearfix pr" >
+	    		<span class="c_333" id="help" >可投资理财金（元）<span class="mui-icon mui-icon-help" style="font-weight: bolder;" ></span></span><span class="mui-pull-right c_ff6" id="alreadyActive">0</span>
+	    		<p id="goinvert">   
+	    			<span  class="pa c_666 f14" style="border-bottom: 1px solid #333;right: 3%;bottom:0.5rem;">去模拟投资>></span>
+	    		</p>
+	    		<p class="f12" id="explain" style="display: none;">可投资理财金金额=已激活理财金金额-已使用理财金金额</p>
+		    	</div>    
+				<div class="mui-scroll"  >  
+					<h5 class="c_333 f18" style="padding: 0.5rem 1rem;">已激活理财金</h5>
+					<!--数据列表-->
+					<ul id="box4" class="mui-table-view" style="background: #fff;">
+						<!--<li class="mui-table-view-cell info info1 activeInfo" href=>
+							<div class="clearfix">
+								<h5 class="c_333 f18 mui-pull-left">新用户注册赠送</h5>
+								<span class="newUserMoney mui-pull-right">1000</span>
+							</div>     
+							<div>
+								<h5 class="f12 mui-pull-left">仅限购买"理财金专享"标识产品</h5>
+								<span class="timeout mui-pull-right f12">2016-01-10 00:00 <span>过期</span></span>
+							</div>
+						</li>
+						<li class="mui-table-view-cell info info1 activeInfo">
+							<div class="clearfix">
+								<h5 class="c_333 f18 mui-pull-left">新用户注册赠送</h5>
+								<span class="newUserMoney mui-pull-right">1000</span>
+							</div>
+							<div>
+								<h5 class="f12 mui-pull-left">首次单笔充值满1000可激活</h5>
+								<span class="timeout mui-pull-right f12">2016-01-10 00:00 <span>过期</span></span>
+							</div>
+						</li>-->
+					</ul>
+					<span class="mui-pull-right look">查看已过期理财金>></span>
+				</div>   
+			</div> 
+			<!--已使用-->      
+			<div id="alreadyUse" style="display: none;" >
+	    		<div class="standByTitle bg_f clearfix" >
+	    		<span class="c_333">收益中理财金（元）</span><span class="mui-pull-right c_ff7" id="useMoney">0</span>
+		    	</div>  
+				<div class="mui-scroll" >
+					<!--数据列表-->
+					<ul id="box1" class="mui-table-view"  style="background: #fff;">
+						<!--<li class="mui-table-view-cell info info1">
+							<div class="clearfix">
+			  					<div>
+									<div class="clearfix">
+										<h5 class="mui-pull-left  c_333 f18" >F计划理财金专享</h5>
+										<span class="c_ff7 mui-pull-right">1000</span>
+									</div>
+									<div class="clearfix productInfo"  >
+										<div class="mui-pull-left">
+											<div class="money c_ff7">100元</div>
+											<div class="introduce c_999">起投资金</div>
+										</div>
+										<div class="mui-pull-left">
+											<div class="money f14">3天</div>
+											<div class="introduce c_999">封闭期</div>
+										</div>
+										<div class="mui-pull-left">
+											<div class="money c_ff7 f16">8%</div>
+											<div class="introduce c_999">年化收益</div>
+										</div>
+									</div>
+								</div>
+								<div class="timeBox clearfix">
+									<div class="mui-pull-left">
+										<p>计息日：2016-01-06</p>
+										<p>还款日：2016-01-06</p>
+									</div>
+									<div class="mui-pull-right tr">
+										<span>总收益(元)</span><br />
+										<span class="c_ff7" style="line-height: 1.5rem;">2.3</span>
+									</div>
+								</div>
+							</div>
+						</li>-->
+						
+					</ul>
+					<span class="mui-pull-right look" >查看已过期理财金>></span>
+				</div>
+			</div> 
+			<!--理财金收益-->
+			<div id="finaMoney" style="display: none;"  >
+	    		<div class="standByTitle bg_f clearfix" id="finaMoney1" >
+	    		<span class="c_333">理财金累计收益（元）</span><span class="mui-pull-right c_ff7" id="fina">0</span>
+		    	</div>
+				<div class="mui-scroll" >
+					<!--数据列表-->
+					<ul id="box2" class="mui-table-view" style="background: #fff;">
+						<!--<li class="mui-table-view-cell info info1">
+							<div class="clearfix">
+								<div>
+									<div class="clearfix">
+										<h5 class="mui-pull-left  c_333 f18" >F计划理财金专享</h5>
+										<span class="c_ff6 mui-pull-right c_ff7">已收益</span>
+									</div>
+									<div class="clearfix productInfo"  >
+										<div class="mui-pull-left">
+											<div class="money c_ff7">100元</div>
+											<div class="introduce c_999">起投资金</div>
+										</div>
+										<div class="mui-pull-left">
+											<div class="money f14">3天</div>
+											<div class="introduce c_999">封闭期</div>
+										</div>
+										<div class="mui-pull-left">
+											<div class="money c_ff7 f16">8%</div>
+											<div class="introduce c_999">年化收益</div>
+										</div>
+									</div>
+								</div>
+								<div class="timeBox clearfix">
+									<div class="mui-pull-left">
+										<p>计息日：2016-01-06</p>
+										<p>还款日：2016-01-06</p>
+									</div>
+									<div class="mui-pull-right tr">
+										<span>总收益(元)</span><br />
+										<span class="c_ff7" style="line-height: 1.5rem;">2.3</span>
+									</div>
+								</div>
+							</div>
+						</li>-->
+						
+					</ul>
+					<span class="mui-pull-right look " id="look">查看已过期理财金>></span>
+				</div>
+			</div> 
+	   </div>
+	   
+	  	
+	  </div> 
+	    	
+	
+</body>
+</html>

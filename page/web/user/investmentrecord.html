@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>投资记录</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/investmentrecord.css" />
+    <script src="../../../public/js/major/jquery.js"></script> 
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/investmentrecord_main");
+      	})
+    </script>                   
+</head>
+<body>     
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">投资记录</h1>
+		<!--<span class="mui-pull-right recharge c_fff" style="margin-top: 0.8rem;">投资记录</span>-->
+	</header>
+	<div class="mui-content">    
+		<!--图文列表-->     
+	    <div id="good-list"  class=" mui-scroll-wrapper">
+			<div class="mui-scroll"> 
+				<!--数据列表-->  
+				<ul id="image-text-list-ul" class="mui-table-view" style="background: #efeff4;">
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>添加银行卡</title>
+		 <script src="../../../public/js/major/mui.min.js"></script>
+	    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+	     <link href="../../../css/font-awesome.min.css" rel="stylesheet"/>
+	 	<link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+	    <!--<link rel="stylesheet" href="../../../css/page/user/forgetpwd.css" />-->
+	     <script src="../../../public/js/major/jquery.js"></script>
+	    <script src="../../../public/js/major/config.js"></script>
+	    <script src="../../../public/js/major/common.js"></script>
+	     <script src="../../../public/js/application/addcard.js"></script>
+	     <style type="text/css">
+	     	 .mui-input-row{
+				border-bottom: 1px solid #ccc;
+			}
+	     </style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-arrowleft"></a>
+		<h1 class="mui-title">添加银行卡</h1>
+	</header> 
+	<div class="mui-content" >
+		 <div class="mui-input-row bor" style="height:55px;background: #fff;margin-top: 0.5rem;">
+					<label class="c_666 "  style="width: 30%;height: 100%;padding:20px 10px">
+					银行名</label>
+					<input style="width: 70%;height: 100%" id='bankName' readonly="readonly" type="text" class=" mui-input f14 c_999" placeholder="">
+					
+				</div> 
+				<!--<h5 style="padding: 0 0.5rem;">*支持储蓄卡和信用卡</h5>-->
+			</div>
+		 
+				<!--<h5 style="padding: 0 0.5rem;">*支持储蓄卡和信用卡</h5>-->
+			</div>
+	    
+	<div  style="width: 100%;margin: 0px auto;margin-top: 5%; background: #fff;">
+				
+			<!--<div style="border: 1px solid red;">-->
+				 <div class="mui-input-row bor" style="height:55px;background: #fff;margin-top: 0.5rem;">
+					<label class="c_666 "  style="width: 30%;height: 100%;padding:20px 10px">
+					银行卡号</label>
+					<input style="width: 70%;height: 100%" id='bankCard' type="number"    class=" mui-input f14 c_999" placeholder="请输入银行卡号">
+					
+				</div> 
+				<div class="mui-input-row bor" style="height: 55px;">
+					<label class="c_666" style="width: 30%;height: 100%; padding: 20px 10px;">
+					姓名</label>
+					<input style="width: 70%;height: 100%;"  id='userName'   type="text" class=" mui-input f14 c_999" placeholder="请输入真实姓名">
+				</div>
+				<div class="mui-input-row bor" style="height:55px;">
+					<label class="c_666"  style="width: 30%;height: 100%;padding:20px 10px">
+					身份证号</label>
+					<input style="width: 70%;height: 100%" id='idCard'   type="text" class=" mui-input f14 c_999" placeholder="请输入身份证号">
+					
+				</div> 
+				<div class="mui-input-row bor" style="height:55px;">
+					<label class="c_666"  style="width: 50%;height: 100%;padding:20px 10px">
+					银行预留的手机号</label>
+					<input style="width: 50%;height: 100%" id='phoneNum'  type="text"  class=" mui-input f14 c_999" placeholder="请输入手机号">
+					
+				</div>
+				<p>温馨提示:由于第三方支付限制,需支付0.01元以验证银行卡有效性,添加银行卡成功后,我们将在您的账户余额中充值0.01元</p>
+				<!--<button  style="color:#fff;border:none;height: 35px;top: 0.5rem;right: 0.5rem;" class="mui-pull-right f12 bg_55a" id="getChecked">获取验证码</button>-->
+				
+				
+			<!--</div>-->
+			
+			    
+
+			</div> 
+			
+			<div class="mui-content-padded tc" style="width: 95%;margin: 0px auto; margin-top: 30px;">
+				<button id='sure' class="mui-btn mui-btn-block mui-btn-primary bg_55a " style="height: 45px;line-height: 0px; width: 100%;color:#fff;border:none;">下一步</button>
+			</div>
+			<div id="formBox">
+				
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>修改密码</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/changepwd.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/md5.js"></script>
+      <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){ 
+//    		
+      		seajs.use("../../../public/js/application/changepwd_main");
+      	})
+    </script>
+</head> 
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">修改登录密码</h1>
+	</header>  
+	<div class="mui-content" style="height: 100%;">
+			<!--<form id='login-form' class="mui-input-group">-->
+				<!--<div class="mui-input-row" style="text-align: center;">
+					<p id="error" style="color: red;"></p>
+				</div>-->   
+				<div style="width: 95%; border: 1px solid #CCCCCC;border-radius: 5px;background-color: #FFFFFF;margin: 0px auto; margin-top: 20%;">
+					
+				
+				<div class="mui-input-row" style="height: 50px;border-bottom: 1px solid #DDDDDD;">
+					<label style="height:100%;width: 20% ">
+						<img src="../../../public/img/yo3.png" height="30px" alt="" />
+					</label>
+					<input id='oldPwd'style="width: 80%;height: 100%;" type="password" class="mui-input-clear mui-input" placeholder="请输入原始密码">
+				</div>
+				<div class="mui-input-row" style="height: 50px;border-bottom: 1px solid #DDDDDD;">
+					<label style="height:100%;width: 20% ">
+					<img src="../../../public/img/yo3.png" height="30px" alt="" />
+					</label>
+					<input id='password'style="width: 80%;height: 100%;" type="password" class="mui-input-clear mui-input" placeholder="请输入新密码">
+				</div>
+				<div class="mui-input-row" style="height: 50px;border-bottom: 1px solid #DDDDDD;"> 
+					<label style="height:100%;width: 20% ">
+						<img src="../../../public/img/yo1.png" height="30px" alt="" />
+					</label>
+					<input id='newpassword'style="width: 80%;height: 100%;" type="password" class="mui-input-clear mui-input" placeholder="重复新密码">
+				</div>
+				</div>
+			<!--</form>-->  
+			<div class="mui-content-padded tc" style="margin: 2rem 0;">
+				<button id='changepwd' class="mui-btn  bg_ff7 f18" style="color:#fff;border: none;width: 85%;height: 50px;">确定修改</button>
+			</div>  
+		</div>
+	     
+</body>
+</html>

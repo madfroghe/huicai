@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>充值页面</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/rechargemoney.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/rechargepae_main");
+      	})
+    </script>
+</head>
+<body>     
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">账户充值</h1>
+	</header>
+	<div class="mui-content">
+		<h4  style="color:#FF0000">*请选择充值方式：</h4>
+		<div class="mui-card">
+			
+			<form class="mui-input-group">
+				<div class="mui-input-row mui-radio mui-left">
+					<label>盛付通</label>
+					<input name="radio1" class="mui-selected" id="shenFuTong" type="radio">
+				</div>
+				<!--<div class="mui-input-row mui-radio mui-left">
+					<label>Radio</label>         
+					<input name="radio1" type="radio" checked>
+				</div>
+				<div class="mui-input-row mui-radio mui-left">
+					<label>Radio</label>
+					<input name="radio1" type="radio" checked>
+				</div>-->    
+			</form>
+		</div>
+		<div class="tc" style="margin-top: 15px;">
+			<button class="mui-btn  bg_ff6 c_fff" id="sureBtn" style="width: 50%;height: 40px;">确认充值</button>
+		</div> 
+		
+	</div> 
+	
+
+	
+	
+</body>
+</html>

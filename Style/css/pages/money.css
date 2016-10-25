@@ -1,0 +1,48 @@
+
+
+/*详情页样式*/
+
+.menu span{
+	padding: 0.7rem 0.3rem;
+	float: left;
+	display: inline-block;
+	width: 33.33%;
+}
+.active{
+	background:#FF6600;
+	color: #fff;
+}
+.mui-bar{
+	box-shadow: none;
+	
+	}
+.menu{
+	border-bottom:1px solid #ccc ;
+}
+.mui-content{
+	padding: 0 0.8rem 4.3rem 0.8rem;
+}
+.productTitle{
+	padding: 0.8rem 0;
+}
+.productTitle h5{
+	font-size: 1.2rem;
+}
+.productTitle span{
+	font-size: 1rem;
+	display: inline-block;
+	margin-top: 0.3rem;
+	margin-left: 0.3rem;
+}
+.goodInfo>div{
+	float: left;
+}
+.goodInfo>div:first-child{
+	width: 50%;
+}
+.goodInfo>div>p{
+	font-size: 1rem;
+}		
+		
+		
+

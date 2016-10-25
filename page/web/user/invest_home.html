@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../../Style/css/pages/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../../../Style/css/pages/default.css">
+	<link rel="stylesheet" href="../../../Style/css/pages/demo.css">
+    <link rel="stylesheet" href="../../../Style/css/pages/jquery.flipster.css">
+    	<link rel="stylesheet" href="../../../Style/css/pages/incest_main.css" />
+    <link rel="stylesheet" href="../../../Style/css/pages/investhome.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/application/jquery.flipster.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+    $(function(){
+      		seajs.use("../../../public/js/application/invest_home");
+     })    
+//    	$(function(){ $(".flipster").flipster({ style: 'carousel', start: 0 }); });
+    </script> 
+     <script type="text/template" id="productTemplate">
+	<div class="productMain" pid="{id}" ppid="{piid}">     
+		<div class="title">{productName}</div>
+			<div class="content">       
+				<div class="left">       
+					<div class="status" id="{piid}">
+						<div class="pr mui-pull-left" style="display:inline-block; width:{progress}%;height: 20px;background:red;">
+							<span class="pa" style="top:0rem;left: 0.3rem;">{productStatus}</span>
+						</div>
+					</div> 
+					<div class="money">{unitPrice}元</div>
+					<div class="introduce">起投资金</div>
+				</div>            
+				<div class="center">    
+					<div class="time"><font class="c_ff6">{deadline}</font></div> 
+					<div class="introduce">产品封闭期</div>
+				</div>         
+				<div class="right">      
+					<div class="chart pa c_ff6">{yield}</div> 
+					<div  class="introduce">年化收益</div>
+				</div>
+			</div>
+		</div>
+	</div>         
+	</script> 
+</head>    
+<body>
+	<div class="mui-content">
+		<div id="ext_Cover" style="position: absolute;z-index: 999;top: 0;padding: 0 10%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+				<div class="tc" style="25rem;height: 10rem;margin: 45% auto;padding:1rem 0;background:#fff;border-radius:5px ;">
+					<h4 style="color:#ff7f00;margin-bottom: 0.6rem;">温馨提示</h4>
+					<p>亲,真的要离开吗?</p> 
+					<div style="margin-top:0rem">
+						<button id="sure_Btn" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">是</button>
+						<button id="cancel_Btn" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>
+					</div>         
+				</div>
+			</div>
+		<!--<div id="title" class="tc fl clearfix">
+			<h5>F计划-让理财更轻松</h5>
+		</div>-->   
+		<div class="classTitle mui-bar-nav mui-bar tc mui-pull-left" style="background: #fff;padding-top: 0;padding: 0; " >
+			<button class="head fProject  mui-pull-left menu menu1 active" status="0" style="border-radius: 0;">双融宝</button>
+			<button class="head head1 col mui-pull-left menus  " status="1" style="border-radius: 0;border-left: 1px solid #ccc;border-right: 1px solid #ccc;">私募宝</button>
+			<button class="head head1 col mui-pull-left menus  " status="2" style="border-radius: 0;border-right: 1px solid #ccc;">众星宝</button> 
+			<button class="head head1 col mui-pull-left menus  " status="3" style="border-radius: 0;">信托宝</button>
+		</div>        
+		<div id="fbox" style="display: none;">
+		            
+		<div class="flipster bg_ff7"style="padding: 2.3rem 0 !important; width: 100%;" > 
+		  <ul style="background:none !important;" class="tableBox" id="tableBoxs">
+		  	<!--<li class="mui-table-view-cell" pid="170">   
+		  		<a href="javascript:void(0)" class="Button Block tc" pid="170">
+		  			<h3 class="c_666" style="border-bottom: 2px solid #ccc;">1月期</h3>
+		  			<div><span class="c_e43" style="font-size: 2rem;">12%</span></div>
+		  			<div class="c_666">年化收益</div> 
+		  		</a>                  
+		  	</li>
+	  		<li class="mui-table-view-cell" pid="170">
+	  			<a href="demo2.html" class="Button Block tc" pid="170">
+		  			<h3 class="c_666 disNone" style="border-bottom: 2px solid #ccc;">3月期</h3>
+		  			<div><span class="c_e43" style="font-size: 2rem;">10%</span></div>
+		  			<div class="c_666">年化收益</div>
+	  			</a>              
+	  		</li>   
+	  		<li class="mui-table-view-cell" pid="170">
+	  			<a href="demo3.html" class="Button Block tc" pid="170">
+		  			<h3 class="c_666" style="border-bottom: 2px solid #ccc;">6月期</h3>
+		  			<div><span class="c_e43" style="font-size: 2rem;">8%</span></div>
+		  			<div class="c_666">年化收益</div>
+		  		</a>
+	  		</li> -->
+	  		
+		  </ul> 
+		 
+		</div> 
+		
+		<!--图标-->
+		<div id="iconBox" class="clearfix">
+			<div class="tc goodDtail">
+				<div><img src="../../../public/img/professional.png" width="29%" alt="" /></div>
+				<div ><span class="c_666 f14">专业安全</span></div>
+			</div>
+			<div class="tc goodDtail">
+				<div><img src="../../../public/img/onekey.png" width="29%" alt="" /></div>
+				<div class="bordr_line"><span class="c_666 f14">一键投资</span></div>
+			</div>
+			<div class="tc goodDtail">
+				<div><img src="../../../public/img/cast.png" width="29%" alt="" /></div>
+				<div class="bordr_line"><span class="c_666 f14">100起投</span></div>
+			</div>
+			<div class="tc goodDtail"> 
+				<div><img src="../../../public/img/acounticon.png" width="29%" alt="" /></div>
+				<div class="bordr_line"><span class="c_666 f14">查看详情</span></div>
+			</div> 
+		</div>
+		<div class="tc" style="padding: 1rem;background: #F5F5F5;">
+			<button class="mui-btn c_fff bg_ff7 f18" style="width: 85%;height: 50px;" id="quiklyBtn">马上赚钱</button>
+		</div>
+		</div>
+		<!--众星宝-->
+		<div id="good-list"  class="  mui-scroll-wrapper">
+			<div class="mui-scroll" >   
+				<div id="productListPanel">
+					         
+				</div>
+				<!--数据列表-->   
+				
+			 </div> 
+		</div>
+		
+	</div>
+</body>
+</html>

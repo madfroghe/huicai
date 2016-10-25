@@ -1,0 +1,22 @@
+  .bor{
+   	border-bottom: 1px solid #C7C7CC;
+   	height: 40px;
+   }
+    .formTable>div{
+    	height: 3.5rem;
+    	padding: 0.5rem 0;
+    }
+    #butto{
+    	margin-top: 2rem;
+    }
+    #butto1{
+    	width: 7.3rem;
+    	height: 2.5rem;
+    	border: none;
+    }
+    #butto2{
+    	width: 7.3rem;
+    	height: 2.5rem;
+    	border: none;
+    	margin-left: 2rem;
+    }

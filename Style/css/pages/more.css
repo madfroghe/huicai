@@ -1,0 +1,25 @@
+/*
+“更多”相关CSS
+hyh===>408240762 
+*/
+
+/*通知设置*/
+.more-table{ margin-top: 0px;}
+.more-table .mui-switch{ float: right; width: 60px;}
+.more-table .mui-media-body{ line-height: 30px;}
+
+.more-notice { padding:10px 16px;}
+.more-notice p{ color: blue;}
+.more-notice li{ list-style: none; font-size: 12px;}
+
+/*关于我们*/
+.more-table .more-lable,.more-table .more-input{ float: left;}
+.more-table .more-lable{ width: 110px;}
+.more-table .more-input{ font-size: 13px ;}
+
+/*帮助中心*/
+.help-common-item{ margin: 10px 0px; padding: 10px; background: #fff;}
+.help-common-item h3{ font-size: 14px;}
+.help-common-item p{ font-size: 12px; color: #00625A; line-height: 16px;}
+
+

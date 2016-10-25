@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>充值记录</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/reflrecord.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/rerecord_main");
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">充值记录</h1>
+	</header>      
+	<div class="contnet" >  
+	<!--<div class="menus tc" style="border: 1px solid red;">
+		<button class="mui-btn mui-pull-left mui-btn-primary" status ='0'>全部</button>
+		<button class="mui-btn mui-pull-left" status ='3'>请求中</button>
+		<button class="mui-btn mui-pull-left" status ='2'>处理中</button>
+		<button class="mui-btn mui-pull-left" status ='4'>失败</button>
+		<button class="mui-btn mui-pull-left" status ='1'>成功</button>
+	</div>-->
+	<!--图文列表-->
+	    <div id="good-list"  style="margin-top: 2.3rem;" class="mui-scroll-wrapper">
+			<div class="mui-scroll" >
+				<!--数据列表-->
+				<ul id="image-text-list-ul" class="mui-table-view" style="background: #ccc;">
+					<!--<li class="mui-table-view-cell info">
+						<div class="title clearfix">
+							<h4 class="mui-pull-left c_ff6">2015-08</h4>
+						</div>
+						<div class="contentBody clearfix">
+							<div class="mui-pull-left">
+								<p>提现银行： <span>招商</span></p>
+								<p>提现卡号：<span>6217****</span></p>
+								<p>提现金额：<span class="c_c22">1000</span></p>
+								
+							</div>
+							<span class="status mui-pull-right">失败</span>
+							
+						</div>
+						
+					</li>-->
+				</ul>
+			</div>
+		</div>
+</div>
+</body>
+
+</html>

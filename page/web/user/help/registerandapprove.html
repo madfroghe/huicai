@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../../public/js/major/mui.min.js"></script>
+    <link href="../../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+     <link href="../../../../Style/css/common/common.css" rel="stylesheet"/>
+     <script src="../../../../public/js/major/jquery.js"></script>
+   
+    <style type="text/css">
+    	.my-list-image{
+    		height: 1.2rem;
+		width: 1.2rem;
+		display: inline;
+		vertical-align: middle;
+		margin-left: 10px;
+    	}
+    	.textInfo{
+    		display: none;
+    		margin-top: 0.8rem;
+    		padding: 0.5rem ;
+    		border-radius: 5px;
+    		background: #f5f5f5;
+    	}
+    	.mui-table-view-cell{
+    		padding:1rem 0.5rem ;
+    		margin-top: 0;
+    		
+    	}
+    	.mui-table-view-cell>div:first-child{
+    		padding-left: 1rem;
+    	}
+    	.transformRotate{
+			    -webkit-transform:rotate(180deg);
+			    transform:rotate(180deg);
+			    transition-duration:.5s, .5s, .5s;
+			}
+    </style> 
+</head>
+<body>
+	<!--<header class="mui-bar mui-bar-nav" style="background-color:#ff7f00 ;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+		<h1 id="heder" class="mui-title "style="color: #FFFFFF;">常见问题</h1>
+	</header>-->
+	<div class="mui-content">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" >
+				<div ><span>注册时收不到验证码怎么办？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可以等待60秒后，再次尝试发送验证码，
+						若多次尝试无果，请拨打八锂米客服电话400-087-3387，
+						帮您查找原因并解决。
+				</p>
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>为什么要进行实名认证？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;身份证信息是每位投资者在八锂米平台最重要的凭证，确保每个已认证的账号都是真实的投资人，
+					享受八锂米提供的理财服务。同时，提现时仅能使用与
+					实名认证相同身份证下开具的银行卡，确保账户资金安全。
+				</p>
+				
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>如何实名认证？需要提供哪些资料？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实名认证需填写您的姓名、身份证号，并上传身份证正反面照片，提交审核，我们将会于个工作日内完成审核并在“我的账户-账户管理”页面显示结果。
+				</p>
+				
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>不进行实名认证可
+					以购买八锂米<br />产品吗？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未进行实名认证的用户可以充值，但不可购买理财产品、不可提现
+				</p>
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>我该怎么样修改实名认证信息？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为保障用户账户安全，当前平台暂不支持修改实名认证信息，如您有疑问，
+					可拨打400-087-3387与客服人员联系。
+				</p>
+				
+				</div>
+				
+			</li>
+			
+		</ul> 
+	</div>
+</body>
+ <script type="text/javascript" charset="UTF-8">
+ 		function listChangeNav(){
+		    $('.menuList').slideToggle();
+		    $('.arrowBtn').toggleClass("transformRotate");
+		}
+		
+      	mui.plusReady(function(){
+      		$(".mui-table-view-cell").on("tap",function(){
+      			var item =$(this);
+      			item.find(".textInfo").slideToggle();
+      			item.find('div').eq(0).find("span").eq(1).find("img").toggleClass("transformRotate");
+      		})
+
+      	})
+    </script>
+</html>

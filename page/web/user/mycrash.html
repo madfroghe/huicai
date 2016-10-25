@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+     <script src="../../../public/js/major/md5.js"></script> 
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+    $(function(){
+      		seajs.use("../../../public/js/application/mycrash");
+      	}) 
+      	
+      	
+    </script>
+    <style type="text/css">
+    	.mui-popover {
+			/*border: 1px solid red;*/
+				height: 300px;
+				margin: 0 auto;
+				padding-left: 1rem;
+			}
+			#middlePopover{
+				margin-right: 0;
+			}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的理财金</h1>
+		
+	</header> 
+	<div class="mui-contnet" style="margin-top: 4rem;">
+		<div class="tc">
+			<h4 class="c_666">可用理财金：<span id="money" class="c_ff7"></span><span>元</span></h4>
+		</div> 
+		<div class="tc" style="margin-top: 1.6rem;"> 
+			<div class="labelInfo  bg_f" style="padding: 1rem 0 0 0;" >
+				<!--<div class="pa f14 c_c22" style="top: 2.7rem; left: 5rem;">*项目最大投资金额为<span id="unitPrice"> </span></div>-->
+				<label>投资金额：</label><input type="text" placeholder="" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="invsetMoney" style="width: 57%;" class="f12"  />&nbsp;<span style="color: #f67629;">元</span>
+				     
+			</div>   
+			<div class="labelInfo bg_f" style="margin-top: 1rem; padding: 1rem 0 0 0;">
+				<label>到期收益：</label><input type="text" readonly="readonly" style="width: 55%;" id="returnMoney" class="f12 c_696"  />&nbsp;<span style="color: #f67629;">元</span>
+				  
+			</div>  
+		</div>
+		<div class="tc" style="margin-top: 2rem;">
+			<button class="bg_ff7 c_fff f18" style="width: 80%;height: 45px;border: none;" id="btn">赚钱咯</button>
+		</div>
+		<div id="middlePopover"  class="mui-popover mui-popover-action">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view" style="margin-right: 0.5rem;margin-top: 5rem;"> 
+						<li class="mui-table-view-cell" style="padding-top: 1.3rem;">
+							<input type="password" id="trdePwd" placeholder="请输入交易密码" style="color: #000;"  />
+						</li>    
+						<li class="mui-table-view-cell" id="sure" style="color: #666;">
+							确定
+						</li>
+						<li class="mui-table-view-cell" id="cancel" style="color: #666;" >
+							取消
+						</li>  
+						
+						<!--<li class="mui-table-view-cell" id="forgetTrade">
+							忘记交易密码
+						</li>-->
+					</ul>
+					<!--<button class="mui-btn mui-btn-block mui-btn-danger">取消</button>
+					<button class="mui-btn">取消</button>-->
+				</div>
+			</div>
+   
+		</div>
+		
+		<div style="padding: 0 1rem;margin-top: 1rem;">
+			<h4>如何获取更多理财金？</h4>
+			<p>&nbsp;&nbsp;&nbsp;1. 老客户邀请新客户投资可享受新客户首次单笔投资金额*10%的理财金；</p>
+			<p>&nbsp;&nbsp;&nbsp;2. 理财金还将出没于各种活动之中，敬请留意87汇财的活动哟。</p>
+		</div>
+	</div>
+</body>

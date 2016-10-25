@@ -1,0 +1,34 @@
+.mui-btn{
+	float: left;
+	/*border-right: 1px solid #ccc;*/
+	width: 25%;
+}
+.menu span{
+	padding: 0.7rem;
+	float: left;
+	display: inline-block;
+	width: 25%;
+}
+.contentBody{
+	margin-top: 0rem;
+	width: 100%;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #ccc;
+}
+.contentBody>div{
+	text-align: center;
+	width: 30%;
+	
+}
+.active{
+	color: #fff;
+	background: #FF6600;
+}
+#image-text-list-ul{
+	margin-top: 1rem;
+}
+.info{
+	margin-top: 0.5rem;
+	background: #fff;
+	/*border: 1px solid red;*/
+}

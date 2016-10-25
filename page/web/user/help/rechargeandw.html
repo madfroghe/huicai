@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../../public/js/major/mui.min.js"></script>
+    <link href="../../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+     <link href="../../../../Style/css/common/common.css" rel="stylesheet"/>
+     <script src="../../../../public/js/major/jquery.js"></script>
+   
+    <style type="text/css">
+    	.my-list-image{
+    		height: 1.2rem;
+		width: 1.2rem;
+		display: inline;
+		vertical-align: middle;
+		margin-left: 10px;
+    	}
+    	.textInfo{
+    		display: none;
+    		margin-top: 0.8rem;
+    		padding: 0.5rem ;
+    		border-radius: 5px;
+    		background: #f5f5f5;
+    	}
+    	.mui-table-view-cell{
+    		padding:1rem 0.5rem ;
+    		margin-top: 0;
+    		
+    	}
+    	.mui-table-view-cell>div:first-child{
+    		padding-left: 1rem;
+    	}
+    	.transformRotate{
+			    -webkit-transform:rotate(180deg);
+			    transform:rotate(180deg);
+			    transition-duration:.5s, .5s, .5s;
+			}
+    </style> 
+</head>
+<body>
+	<!--<header class="mui-bar mui-bar-nav" style="background-color:#ff7f00 ;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+		<h1 id="heder" class="mui-title "style="color: #FFFFFF;">常见问题</h1>
+	</header>-->
+	<div class="mui-content">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" >
+				<div ><span>购买的产品没有到期，是否可以提<br />
+					前赎回？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不可以，产品需过封闭期后方可赎回。
+				</p>
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>充值和提现有没有手续费？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;充值、购买及赎回产品均不收取手续费，提现未投资资金时收取提现金额的3%。用户注册满一周后，
+					每月享有2次免费提取已投资资金的机会，超过次数收取最低2元/笔手续费。
+				</p>
+				
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>充值和提现有没有银行卡限制？<br />单笔充值是否有限额？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前支持工行、农行、中行、建行、交行、招商、
+					民生、光大、浦发、兴业、中信、邮政、平安、广发、上海、北京、上海、
+					华夏、上海农商、北京农商银行。具体限额根据银行和地区的不同，会有不同。
+				</p>
+				
+				</div>
+				
+			</li>
+			<li class="mui-table-view-cell" >
+				<div ><span>提现一般多久能到账？</span><span class="mui-pull-right" style="margin-right: 0%;"><img class="my-list-image" src="../../../../public/img/help/arrow.png" /></span></div>
+				<div class="textInfo">
+					<p style="margin-top: 1rem;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工作日（T日）周一至周四17:00之前提交提现申请，审核通过后，一般T+2日内到账；在周四17:00之后提交提现申请，将于下周一处理，审核通过后，一般T+2日内到账
+						具体到账时间视不同地区或银行会有不同的，如遇国家节假日相应顺延。
+				</p>
+				</div>
+				
+			</li>
+			
+			
+		</ul> 
+	</div>
+</body>
+ <script type="text/javascript" charset="UTF-8">
+ 		function listChangeNav(){
+		    $('.menuList').slideToggle();
+		    $('.arrowBtn').toggleClass("transformRotate");
+		}
+		
+      	mui.plusReady(function(){
+      		$(".mui-table-view-cell").on("tap",function(){
+      			var item =$(this);
+      			item.find(".textInfo").slideToggle();
+      			item.find('div').eq(0).find("span").eq(1).find("img").toggleClass("transformRotate");
+      		})
+
+      	})
+    </script>
+</html>

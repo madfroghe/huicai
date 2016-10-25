@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style>
+    body{
+    	background-color: #CCCCCC;
+    } 
+    .datu{
+    	/*border-bottom: 1px solid #C7C7CC;*/
+    	height: 50px;
+    }
+    .datu>label{
+    	text-align: left;
+    	padding: 0px; 
+    	/*background-color: red;*/
+    	height: 50px;
+    	line-height: 50px;
+    }
+    .datu>input[type='text']{
+    	/*background-color: royalblue;*/
+    	height: 50px;
+    }
+    #butto{
+    	width: 90%;
+    	height: 50px;
+    	background-color: #FF6600;
+    	margin:20px auto;
+    	/*float: left;*/
+    	border-radius: 10px;
+    	font-size: 20px;
+    	color: #f1d8d0;
+    	line-height: 50px;
+    	text-align: center;
+    }
+    </style>
+     
+    <script type="text/javascript" charset="utf-8">
+//    	mui.init();
+      	$(function(){
+      		seajs.use("../../../public/js/application/mailbox_main");
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+			<h1 class="mui-title"style="color: #FFFFFF;">邮箱验证</h1>
+	</header>
+	<div class="mui-content" style=" padding: 0px 10px; margin-top: 60px;">
+		
+		
+		
+		<div class="mui-input-row datu">
+				<label class="f15">邮箱地址:</label>
+				<input type="text" id="mailNumber" class="f15 mui-input-clear" placeholder="请输入邮箱地址">
+		</div>
+ 
+		 
+		
+</div>
+<div id="butto">确定</div>
+</body>
+</html>

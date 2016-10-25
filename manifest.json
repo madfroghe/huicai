@@ -1,0 +1,1564 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H59656C5D",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "P2F汇财",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.1",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+            "description": "访问加速度感应器"
+        },
+        "Audio": {
+            "description": "访问麦克风"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Camera": {
+            "description": "访问摄像头"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Device": {
+            "description": "访问设备信息"
+        },
+        "Downloader": {
+            "description": "文件下载管理"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "File": {
+            "description": "访问本地文件系统"
+        },
+        "Gallery": {
+            "description": "访问系统相册"
+        },
+        "Geolocation": {
+            "description": "访问位置信息"
+        },
+         "Invocation": {
+            "description": "使用Native.js能力"
+        },
+        
+        "Orientation": {
+            "description": "访问方向感应器"
+        },
+        "Proximity": {
+            "description": "访问距离感应器"
+        },
+        "Storage": {
+            "description": "管理应用本地数据"
+        },
+        
+        "Uploader": {
+            "description": "管理文件上传任务"
+        },
+        "Runtime": {
+            "description": "访问运行期环境"
+        },
+        "XMLHttpRequest": {
+            "description": "跨域网络访问"
+        },
+        "Zip": {
+            "description": "文件压缩与解压缩"
+        },
+        "Barcode": {
+            "description": "管理二维码扫描插件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        },
+        "Webview":{
+        	"description": "窗口管理"
+        },
+        "NativeUI":{
+        	"description": "原生UI控件"
+        },
+        "Navigator":{
+        	"description": "浏览器信息"
+        },
+        "NativeObj":{
+        	"description": "原生对象"
+        },"Share":{}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": false,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true,"delay":"3000"
+		},
+		"runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {"plugins":{"share":{"weixin":{"appid":"wxf55a47cd3cd1dec0","appsecret":"46547013af45f0e7ed828e4","description":"可选，微信分享"},"qq":{"appid":"1105102356","description":"QQ分享"}}},
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			},
+			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png","retina8":"unpackage/res/icons/180x180.png","settings-retina8":"unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "C:/Users/Chen/Desktop/87/跳转new/phone320-480.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "C:/Users/Chen/Desktop/87/跳转new/phone640-960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "C:/Users/Chen/Desktop/87/跳转new/phone640-1136.png","retina55":"C:/Users/Chen/Desktop/87/跳转new/phone1242-2208.png","retina47":"C:/Users/Chen/Desktop/87/跳转new/phone750-1334.png","retina55l":"C:/Users/Chen/Desktop/87/跳转new/phone2208-1242.png"
+					},
+					"ipad": {
+						"portrait": "C:/Users/Chen/Desktop/87/跳转new/phone768-1004.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "C:/Users/Chen/Desktop/87/跳转new/phone1536-2008.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "C:/Users/Chen/Desktop/87/跳转new/phone1024-748.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "C:/Users/Chen/Desktop/87/跳转new/phone2048-1496.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "C:/Users/Chen/Desktop/87/跳转new/phone768-1024.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "C:/Users/Chen/Desktop/87/跳转new/phone1024-768.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "C:/Users/Chen/Desktop/87/跳转new/android240-282.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "C:/Users/Chen/Desktop/87/跳转new/android320-442.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "C:/Users/Chen/Desktop/87/跳转new/android480-762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/Chen/Desktop/87/跳转new/android720-1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/Chen/Desktop/87/跳转new/android1080-1882.png"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"public/img/zxx2.png",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/img/zxx1.png",
+					"public/js/major/sea/sea.js",
+					"public/img/zxx.png",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"page/web/user/index_main.html",
+					"public/img/zx3.png",
+					"public/js/application/nitialize-index.js",
+					"public/img/zxx3.png",
+					"public/js/major/mui.min.js",
+					"public/img/zx.png",
+					"public/js/application/index.js",
+					"Style/css/pages/index.css",
+					"public/img/zx2.png",
+					"public/img/zx1.png",
+					null,
+					"public/img/shareimg.png"
+				],
+				"refer": [
+					"page/web/user/myacount.html",
+					"page/web/user/invest_home.html",
+					"page/web/user/more_main.html",
+					"page/web/user/login.html",
+					"page/web/user/greenlocker.html",
+					"page/web/user/servicepage.html",
+					"page/web/user/guide.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/invest_main.html": {
+				"resources": [
+					"public/js/application/invest_main.js",
+					"Style/css/pages/incest_main.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/convert.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"public/js/major/circleProgress.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/ratchicons.ttf",
+					"Style/css/common/fonts/iconfont.ttf"
+				],
+				"refer": [
+					"page/web/user/mycrash.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/invest_home.html": {
+				"resources": [
+					"public/img/ge2.png",
+					"Style/css/pages/investhome.css",
+					"public/js/application/jquery.flipster.js",
+					"public/img/onekey.png",
+					"Style/css/pages/default.css",
+					"Style/css/pages/normalize.css",
+					"public/img/cast.png",
+					"Style/css/pages/jquery.flipster.css",
+					"Style/css/pages/demo.css",
+					"public/js/application/invest_home.js",
+					"public/img/acounticon.png",
+					"public/img/professional.png",
+					"public/img/ring.png",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					null,
+					"Style/css/common/fonts/iconfont.ttf",
+					"public/img/zxx1.png",
+					"public/img/zxx.png",
+					"Style/css/common/fonts/mui.ttf",
+					"public/img/zxx2.png",
+					"public/img/zx3.png",
+					"public/img/zxx3.png",
+					"public/img/zx.png",
+					"public/img/zx2.png",
+					"public/img/zx1.png",
+					"Style/css/pages/incest_main.css",
+					"public/js/major/circleProgress.js",
+					"public/js/major/convert.js"
+				],
+				"refer": [
+					"page/web/user/goodsdetail.html",
+					"page/web/user/myinvest.html",
+					"page/web/user/myacount.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/index_main.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/application/index_main.js",
+					"public/js/major/convert.js",
+					"public/img/z.png",
+					"public/js/major/circleProgress.js",
+					"Style/css/pages/index_main1.css",
+					"Style/css/pages/index.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"public/js/major/common.js",
+					null,
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/fonts/iconfont.ttf",
+					"public/img/loder.gif",
+					"public/img/zxx2.png",
+					"public/img/zxx1.png",
+					"public/img/zx3.png",
+					"public/img/zxx3.png",
+					"public/img/zx2.png",
+					"public/img/zx1.png",
+					"public/img/zxx.png",
+					"public/img/zx.png"
+				],
+				"refer": [
+					"page/web/user/invest_main.html",
+					"page/web/user/invest_home.html",
+					"page/web/user/goodsdetail.html",
+					"page/web/user/greenlocker.html",
+					"page/web/user/gesture.html",
+					"page/web/user/servicepage.html",
+					"page/web/user/network.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/myacount.html": {
+				"resources": [
+					"Style/css/pages/myacunt.css",
+					"public/js/application/myacount_main.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/img/header.png",
+					"Style/css/common/fonts/iconfont.ttf",
+					"public/img/loder.gif"
+				],
+				"refer": [
+					"page/web/user/login.html",
+					"page/web/user/myfinancial.html",
+					"page/web/user/withdraw.html",
+					"page/web/user/recharge.html",
+					"page/web/user/myinvestmentlist.html",
+					"page/web/user/acuntmanager.html",
+					"page/web/user/reflrecord.html",
+					"page/web/user/rerecord.html",
+					"page/web/user/myinvestment.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/login.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"public/js/application/login_main.js",
+					"public/img/yo1.png",
+					"public/img/yo2.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/composition.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/js/major/common.js"
+				],
+				"refer": [
+					"page/web/user/register.html",
+					"page/web/user/forgetpwd.html",
+					"page/web/user/myacount.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/goodsdetail.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/application/money.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/pages/money.css",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/fonts/iconfont.ttf"
+				],
+				"refer": [
+					"page/web/user/myinvest.html",
+					"page/web/user/agreement/fplan.html",
+					"page/web/user/agreement/breakeven.html",
+					"page/web/user/breakeven.html",
+					"page/web/user/fplan.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/myfinancial.html": {
+				"resources": [
+					"public/js/application/myfinancial.js",
+					"Style/css/pages/myfinancial.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/pasmoney.html",
+					"page/web/user/a_invest_main.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/mycrash.html": {
+				"resources": [
+					"public/js/application/mycrash.js",
+					"public/js/major/md5.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/mycrashscus.html",
+					"page/web/user/login.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/withdraw.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"Style/css/pages/withdraw.css",
+					"public/js/major/mui.locker.js",
+					"public/js/application/withdraw.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/withdrawsuccsse.html",
+					"page/web/user/withdrawflase.html",
+					"page/web/user/approve.html",
+					"page/web/user/login.html",
+					"page/web/user/Prompt.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/withdrawsuccsse.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/true.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/reflrecord.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/recharge.html": {
+				"resources": [
+					"public/js/application/recharge_main.js",
+					"Style/css/pages/recharge.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/shengfutong.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/myinvestmentlist.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/application/investmentlist_main.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/pages/myinvestmentlist.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/investmentrecord.html",
+					"page/web/user/login.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/investmentrecord.html": {
+				"resources": [
+					"Style/css/pages/investmentrecord.css",
+					"public/js/application/investmentrecord_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/login.html",
+					"page/web/user/buyagreement.html.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/pasmoney.html": {
+				"resources": [
+					"Style/css/pages/pasmoney.css",
+					"public/js/application/pasmoney.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/acuntmanager.html": {
+				"resources": [
+					"Style/css/pages/acuntmanager.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/js/application/acuntmanager.js",
+					"public/img/header.png",
+					"public/img/share.png"
+				],
+				"refer": [
+					"page/web/user/bankcard.html",
+					"page/web/user/pwdmanager.html",
+					"page/web/user/approve.html",
+					"page/web/user/login.html",
+					"page/web/user/myacount.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/bankcard.html": {
+				"resources": [
+					"public/js/application/bankcard_main.js",
+					"Style/css/pages/bankcard.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/checkedtradepwd.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/checkedhandpwd.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"public/js/major/mui.locker.js",
+					"public/js/application/checkedhandpwd_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/handpwdchange.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/pwdmanager.html": {
+				"resources": [
+					"public/js/application/pwdmanager_main.js",
+					"public/js/major/config.js",
+					"Style/css/pages/pwdmanager.css",
+					"public/img/iconfont-shoushi.png",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"public/img/yo2.png",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/img/yo3.png"
+				],
+				"refer": [
+					"page/web/user/checkedhandpwd.html",
+					"page/web/user/changepwd.html",
+					"page/web/user/passwo_a.html",
+					"page/web/user/gesture.html",
+					"page/web/user/passwo.html",
+					"page/web/user/servicepage.html",
+					"page/web/user/login.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/handpwdchange.html": {
+				"resources": [
+					"public/js/application/handpwdchange_main.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/changepwd.html": {
+				"resources": [
+					"Style/css/pages/changepwd.css",
+					"public/js/application/changepwd_main.js",
+					"public/img/yo1.png",
+					"public/js/major/md5.js",
+					"public/img/yo3.png",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/login.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/more_main.html": {
+				"resources": [
+					"public/js/application/more.js",
+					"Style/css/pages/more_main.css",
+					"public/img/ge7.png",
+					"public/img/ge6.png",
+					"public/img/ge5.png",
+					"public/img/ge4.png",
+					"public/img/ge2.png",
+					"public/img/acounticon.png",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/myacount.html",
+					"page/web/user/help.html",
+					"page/web/user/affiche.html",
+					"page/web/user/aboutus.html",
+					"page/web/user/login.html",
+					"page/web/user/acuntmanager.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/forgethandpwd.html": {
+				"resources": [
+					"public/js/application/forgethandpwd_main.js",
+					"Style/css/pages/register.css"
+				],
+				"refer": [
+					"page/web/user/gesture.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/greenlocker.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"public/js/application/greenlocker.js",
+					"public/js/major/mui.locker.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/forgethandpwd.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/gesture.html": {
+				"resources": [
+					"public/js/application/getstrue_main.js",
+					"public/js/major/md5.js",
+					"public/js/major/mui.locker.js",
+					"Style/css/common/composition.css"
+				],
+				"refer": [
+					"page/web/user/greenlocker.html",
+					"page/web/user/acuntmanager.html",
+					"page/web/user/pwdmanager.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/approve.html": {
+				"resources": [
+					"public/img/z.jpg",
+					"public/js/application/approve_main.js",
+					"public/img/f.jpg",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/acuntmanager.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/passwo_a.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"Style/css/pages/passwo.css",
+					"public/img/yo1.png",
+					"public/js/application/passwo_a.js",
+					"public/img/yo.png",
+					"Style/css/pages/register.css",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"public/img/yo2.png",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/img/yo3.png"
+				],
+				"refer": [
+					"page/web/user/pwdmanager.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/checkedtradepwd.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"Style/css/pages/checkedtradepwd.css",
+					"public/js/application/checkedtradepwd_main.js"
+				],
+				"refer": [
+					"page/web/user/addbankcard.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/addbankcard.html": {
+				"resources": [
+					"public/js/application/addbankcard_main.js",
+					"Style/css/pages/addbankcard.css"
+				],
+				"refer": [
+					"page/web/user/bankcard.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/reflrecord.html": {
+				"resources": [
+					"Style/css/pages/reflrecord.css",
+					"public/js/application/reflrecord_main.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/mycrashscus.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/true.png",
+					"Style/css/common/composition.css",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/myfinancial.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/a_invest_main.html": {
+				"resources": [
+					"Style/css/pages/index_main.css",
+					"public/js/application/a_invest_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/convert.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"public/js/major/circleProgress.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"public/js/major/common.js",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/mycrash.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/myinvest.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"public/img/invertcover.png",
+					"Style/css/pages/myinvest.css",
+					"public/js/application/myinvest_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/fonts/iconfont.ttf"
+				],
+				"refer": [
+					"page/web/user/login.html",
+					"page/web/user/investfalse.html",
+					"page/web/user/investfalse1.html",
+					"page/web/user/investsuccess.html",
+					"page/web/user/approve.html",
+					"page/web/user/passwo.html",
+					"page/web/user/recharge.html",
+					"page/web/user/register.html",
+					"page/web/user/passwo_b.html",
+					"page/web/user/buyagreement.html.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/pay.html": {
+				"resources": [
+					"Style/css/pages/pay.css",
+					"public/js/application/pay_main.js",
+					"public/js/major/md5.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/rechargefalse.html",
+					"page/web/user/rechargesuccess.html",
+					"page/web/user/choosebank.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/shengfutong.html": {
+				"resources": [
+					"public/js/major/md5.js",
+					"public/js/application/shengfutong_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/pay.html",
+					"page/web/user/choosebank.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/rechargefalse.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/false.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/pay.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/rechargesuccess.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/true.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/myacount.html",
+					"page/web/user/recharge.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/investfalse.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/false.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/investfalse1.html": {
+				"resources": [
+					"Style/css/pages/passwo.css",
+					"public/img/false.png",
+					"Style/css/pages/register.css",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css"
+				],
+				"refer": [
+					"page/web/user/recharge.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/investsuccess.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"Style/css/pages/passwo.css",
+					"public/img/true.png",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/pages/register.css"
+				],
+				"refer": [
+					"page/web/user/myinvestment.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/withdrawflase.html": {
+				"resources": [
+					"public/img/false.png",
+					"Style/css/common/common.css",
+					"Style/css/pages/passwo.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/pages/register.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help.html": {
+				"resources": [
+					"public/js/application/hlep_main.js",
+					"Style/css/pages/more.css",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/img/acounticon.png",
+					"Style/css/pages/help.css",
+					"public/img/ge5.png",
+					"public/img/ff7f00-touzi.png",
+					"public/img/renzheng.png",
+					"public/img/licaijin.png",
+					"public/img/bankimg.png",
+					"Style/css/common/fonts/iconfont.ttf"
+				],
+				"refer": [
+					"page/web/user/help-common.html",
+					"page/web/user/help/loginandregiser.html",
+					"page/web/user/help/aboutbalimi.html",
+					"page/web/user/help/registerandapprove.html",
+					"page/web/user/help/rechargeandw.html",
+					"page/web/user/help/acountandbank.html",
+					"page/web/user/help/financialgold.html",
+					"page/web/user/agreement/buyagreement.html",
+					"page/web/user/fqa.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/register.html": {
+				"resources": [
+					"public/img/code.png",
+					"public/js/application/register_main.js",
+					"public/img/tou (1).png",
+					"public/img/yo.png",
+					"public/img/yo3.png",
+					"public/img/yo1.png",
+					"Style/css/pages/register.css",
+					"public/js/major/md5.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/gesture.html",
+					"page/web/user/login.html",
+					"page/web/user/agreement/registeragreement.html",
+					"page/web/user/registeragreement.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/passwo.html": {
+				"resources": [
+					"public/js/application/passwo.js",
+					"Style/css/pages/passwo.css",
+					"public/img/yo1.png",
+					"public/img/yo2.png",
+					"public/img/yo.png",
+					"public/img/yo3.png",
+					"Style/css/pages/register.css",
+					"public/js/major/md5.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/myinvest.html",
+					"page/web/user/pwdmanager.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/choosebank.html": {
+				"resources": [
+					"public/js/application/choosebank.js",
+					"Style/css/pages/choosebank.css",
+					"public/js/major/md5.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/signcontract.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/signcontract.html": {
+				"resources": [
+					"public/js/application/signcontract.js",
+					"Style/css/pages/paymoney.css",
+					"public/js/major/md5.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/pay.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/myinvestment.html": {
+				"resources": [
+					"Style/css/pages/myinvestment.css",
+					"public/js/application/myinvestment_main.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/myinvestmentlist.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/affiche.html": {
+				"resources": [
+					"Style/css/pages/more.css",
+					"public/js/application/affiche_main.js",
+					"Style/css/common/common.css",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/aboutus.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"Style/css/pages/more.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"public/img/liantu.png",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/agreement/fplan.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"page/web/user/agreement/breakeven.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/agreement/breakeven.html": {
+				"resources": [
+					"page/web/user/agreement/fplan.html",
+					"public/img/breakevn.png",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/img/breakeven.jpg",
+					"public/img/breakeven.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/loginandregiser.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/img/ge5.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/aboutbalimi.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/img/help/arrow.png",
+					"public/js/major/mui.min.js",
+					"public/img/ge5.png",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"public/js/major/jquery.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/registerandapprove.html": {
+				"resources": [
+					"public/img/help/arrow.png",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/rechargeandw.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/img/help/arrow.png",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/acountandbank.html": {
+				"resources": [
+					"public/img/help/arrow.png",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/help/financialgold.html": {
+				"resources": [
+					"public/img/help/arrow.png",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/agreement/registeragreement.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/agreement/buyagreement.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/fqa.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"page/web/user/help/registerandapprove.html",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [
+					"page/web/user/help/aboutbalimi.html",
+					"page/web/user/help/rechargeandw.html",
+					"page/web/user/help/acountandbank.html",
+					"page/web/user/help/financialgold.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/registeragreement.html": {
+				"resources": [
+					"page/web/user/agreement/registeragreement.html",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/breakeven.html": {
+				"resources": [
+					"page/web/user/agreement/breakeven.html",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/fplan.html": {
+				"resources": [
+					"page/web/user/agreement/fplan.html",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/forgetpwd.html": {
+				"resources": [
+					"public/img/tou (1).png",
+					"public/js/application/forgetpwd_main.js",
+					"public/img/yo.png",
+					"public/img/yo3.png"
+				],
+				"refer": [
+					"page/web/user/login.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/buyagreement.html.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"public/js/major/jquery.js",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/servicepage.html": {
+				"resources": [
+					"public/img/service1.jpg",
+					"public/img/severcie.jpg",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/passwo_b.html": {
+				"resources": [
+					"public/js/application/passwo_b.js",
+					"Style/css/pages/passwo.css",
+					"public/img/yo1.png",
+					"public/img/yo2.png",
+					"public/img/yo.png",
+					"public/img/yo3.png",
+					"Style/css/pages/register.css",
+					"public/js/major/md5.js",
+					"public/js/major/config.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf",
+					"Style/css/common/common.css",
+					"public/js/major/mui.min.js"
+				],
+				"refer": [
+					"page/web/user/myinvest.html"
+				],
+				"priority": 0
+			},
+			"page/web/user/rerecord.html": {
+				"resources": [
+					"Style/css/common/common.css",
+					"public/js/application/rerecord_main.js",
+					"public/js/major/config.js",
+					"public/js/major/mui.min.js",
+					"public/js/major/common.js",
+					"public/js/major/jquery.js",
+					"Style/css/pages/reflrecord.css",
+					"public/js/major/sea/sea.js",
+					"Style/css/common/composition.css",
+					"Style/css/common/mui.min.css",
+					"Style/css/common/fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/guide.html": {
+				"resources": [
+					"public/js/application/guide_main.js",
+					"public/js/major/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/web/user/network.html": {
+				"resources": [
+					"public/img/timeout.gif",
+					"Style/css/common/composition.css"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"public/img/ze3.jpg",
+				"public/js/application/main.js",
+				"public/js/application/notice_main.js",
+				"public/img/ge4.jpg",
+				"public/img/ze4.png",
+				"public/img/iconfont-chongzhi.png",
+				"public/img/zx3.jpg",
+				"page/web/user/shoushi.html",
+				"page/web/user/webviepage.html",
+				"Style/css/pages/myassets.css",
+				"public/img/lie1.jpg",
+				"public/img/ze5.jpg",
+				"public/img/51f.jpg",
+				"public/img/hot.png",
+				"public/img/ge3.png",
+				"public/js/md5.js",
+				"public/img/1.jpg",
+				"public/img/ge7.jpg",
+				"page/web/user/hopepage.html",
+				"page/web/user/brandintroduction.html",
+				"public/img/ge5.jpg",
+				"public/img/wz.png",
+				"public/img/safe.png",
+				"public/js/application/mui.locker.js",
+				"public/img/iconfont-02.png",
+				"public/img/info.jpg",
+				"public/img/zx2.jpg",
+				"public/img/mi1.jpg",
+				"public/img/fbao.png",
+				"public/img/ge.jpg",
+				"public/img/ge.png",
+				"page/web/user/approvetransit.html",
+				"public/img/QQ20151127134641.png",
+				"page/web/user/nvest_main.html",
+				"page/web/user/agreement.html",
+				"public/img/ge3.jpg",
+				"public/js/application/getUrlData.js",
+				"public/img/newperson.png",
+				"page/web/user/notice.html",
+				"public/js/application/rech-refl_main.js",
+				"public/img/ze1.jpg",
+				"Style/css/pages/goodsdetail.css",
+				"public/js/application/immersed.js",
+				"public/img/hots.png",
+				"page/web/user/payagreement.html",
+				"public/img/zx.jpg",
+				"public/js/application/mui.picker.all.js",
+				"Style/css/pages/mui.picker.min.css",
+				"public/js/application/share.js",
+				"public/img/detail.jpg",
+				"public/img/ge1.jpg",
+				"page/web/user/payways.html",
+				"public/img/ze2.png",
+				"public/img/wz.jpg",
+				"public/img/liuliang.png",
+				"public/img/ze4.jpg",
+				"public/img/ze3.png",
+				"page/web/user/rechargepae.html",
+				"public/img/ge6.jpg",
+				"public/js/application/news_main.js",
+				"public/img/iconfont-touzi.png",
+				"public/img/ze5.png",
+				"page/web/user/help-rule.html",
+				"page/web/user/rech_refl.html",
+				"public/img/bj80.jpg",
+				"Style/css/pages/traderecord.css",
+				"Style/css/pages/flipsternavtabs.css",
+				"Style/css/pages/rech_refl.css",
+				"public/img/iconfont-tuijian.png",
+				"public/img/ze2.jpg",
+				"public/img/mi.jpg",
+				"public/img/ge2.jpg",
+				"page/web/user/persona.html",
+				"public/js/application/myassets_main.js",
+				"page/web/user/traderecord.html",
+				"page/web/home/exmple.html",
+				"public/img/broadband.png",
+				"page/web/user/money.html",
+				"Style/css/pages/app.css",
+				"public/img/bg.jpg",
+				"page/web/user/safety.html",
+				"public/img/ze1.png",
+				"public/js/application/mailbox_main.js",
+				"page/web/user/mailbox.html",
+				"page/web/user/news.html",
+				"public/js/application/paymoney.js",
+				"page/web/user/myassets.html",
+				"page/web/user/paymoney.html",
+				"public/img/animation.gif"
+			]
+		}
+	}
+}

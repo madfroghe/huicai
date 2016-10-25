@@ -1,0 +1,22 @@
+.contentBody{
+	margin-top: 0.3rem;
+	padding: 1rem 0;
+	border-top: 1px solid #ccc;
+}
+.contentBody>div{
+	float: left;
+	text-align: center;
+	width: 33.3%;
+}
+body{
+	background-color: #efeff4;
+}
+.info{
+	/*border: 1px solid #ccc;*/
+	padding: 1rem 0.5rem;
+	background: #fff;
+	margin-top: 0.5rem;
+}
+#good-list{
+	margin-top: -60px;
+}

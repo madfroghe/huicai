@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>投资理财</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+        <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../../Style/css/pages/index_main.css"/>
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){  
+      			seajs.use("../../../public/js/application/a_invest_main");
+      	})
+    </script>
+    <script type="text/template" id="productTemplate"> 
+    	<div class="productMain" id="{id}" pid="{id}" ppid="{piid}">     
+			<div class="title">{productName}</div>
+			  
+			<div class="content">         
+				<div class="left">  
+					<div class="status">
+						<div class="pr mui-pull-left" style="display:inline-block; width:{progress}%;height: 20px;background:red;">
+							<span class="pa" style="top:0rem;left: 1rem;">{productStatus}</span>
+						</div>
+					</div> 
+					<div class="money">{unitPrice}元</div>
+					<div class="introduce c_696">起投资金</div>
+				</div>                
+				<div class="center">     
+					<!--<div class="status invest">我要投资</div>-->
+					<div class="time c_ff7"><font class="c_ff6">{deadline}</font></div>
+					<div class="introduce c_696">产品封闭期</div>
+				</div>   
+				<div class="right">    
+					<div class="chart pa c_ff6">{yield}%</div> 
+					<div  class="introduce c_696">年化收益</div>
+				</div>   
+			</div>                 
+		</div>           
+    </script> 
+            
+    <script type="text/template" id="popoverListTemplate"> 
+	    <li value="{value}" class="mui-table-view-cell">{name}</li> 
+    </script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav" style="background-color:#ff7f00 ;">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+	<h1 id="heder" class="mui-title "style="color: #FFFFFF;"></h1>
+</header>
+<!--<div class="mui-content">-->
+	<div class="btnList clear">
+		<div id="status_popover" class="mui-popover mui-popover-action">
+			<ul id="status_list" class="mui-table-view" >
+			     
+		 </ul>      
+		</div>
+		<div id="order_popover" style="right: 0;" class="mui-popover mui-popover-action">
+			<ul id="style_list" class="mui-table-view" >
+			    
+		   </ul> 
+		</div>          
+	</div>
+	<!--<div class="btnList mui-bar mui-bar-nav clear" style="margin-top: 44px;padding: 0;"> 
+		<div class="btnItem" id="btnItem1">   
+				<span id="status" class="c_ff6">可购买</span>
+				<span class="mui-icon mui-icon-arrowdown" id="arrow" style="display: inline-block;color: #cbcaca;font-weight: bolder;"></span>
+			
+		</div>          
+		
+		<div class="btnItem" id="btnItem2"> 
+				<span id="order" class="c_ff6">排序</span>
+			<span class="mui-icon mui-icon-arrowdown" id="arrow1" style=" display: inline-block;color: #cbcaca;font-weight: bolder;"></span>
+			 
+		</div>  
+	</div>-->     
+	 
+<!--</div>-->    
+<!--产品列表-->     
+	<div id="refreshContainer"  class="mui-scroll-wrapper">
+	<!--<div class="mui-scroll" >-->
+		<div  id="productListPanel" class="productListPanel">  
+			
+		</div>        
+	<!--</div>-->        
+	</div> 
+</body>     
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

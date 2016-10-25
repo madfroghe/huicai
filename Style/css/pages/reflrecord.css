@@ -1,0 +1,21 @@
+.menus>button{
+	width:18%;
+}
+.mui-bar{
+	height: 40px;
+}
+.menus span{
+	font-size: 14px ;
+	padding: 0.6rem;
+	float: left;
+	display: inline-block;
+	width: 20%;
+}
+.info{
+	background:#fff;
+	margin-top: 0.5rem;
+}
+.active{
+	color: #fff;
+	background: #FF6600;
+}

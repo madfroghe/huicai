@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>账户管理</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/acuntmanager.css" />
+    <script href="../../../public/js/application/share.js"></script>
+     <script href="../../../public/js/application/immersed.js"></script>
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+	      		seajs.use("../../../public/js/application/acuntmanager");
+	      }) 
+    </script>
+</head>
+<body>        
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">账户管理</h1>
+	</header>             
+	<div class="mui-content" >
+		<div id="ext_Cover" style="position: absolute;z-index: 999;top: 0;padding: 0 5%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+			<div class="tc" style="width:18rem;height: 8rem;margin: 75% auto;padding:1rem 0;background:#fff;border-radius:5px ;">
+				<h4 style="color:#ff7f00;margin-bottom: 0.6rem;">温馨提示</h4>
+				<p>亲,真的要离开吗?</p>  
+					<div style="margin-top:0.8rem">   
+						<button id="sure_Btn" class="mui-btn" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">是</button>
+						<button id="cancel_Btn" class="mui-btn" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>
+					</div> 
+			</div>
+		</div>
+		<div id="share_Cover" style="position: absolute;z-index: 999;top: 0;padding: 0 5%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+			<div class="tc" style="width:18rem;height: 10rem;margin: 75% auto;padding:0.5rem 0.5rem;background:#fff;border-radius:5px ;">
+				<div>
+					<p class="heading">分享内容：</p>
+					<textarea id="sharecontent" rows="2" cols="15"> </textarea>
+				</div>
+				<div style="margin-top:0.1rem"> 
+					<button id="sure_share" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">分享到</button>
+					<button id="cancel_share" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>
+				</div>  
+			</div>
+		</div> 
+		<div id="Mycode" style="position: absolute;z-index: 999;top: 9rem;padding: 0 10%;width: 100%;display: none;">
+			<div class="tc" style="background: url(../../../public/img/share.png) no-repeat;background-size: cover;width: 100%;height: 16rem;margin: 0 auto;padding-top: 6.3rem;">
+				<h3 style="color: #fdd23e;margin-bottom: 0.6rem;">请填写邀请码</h3>
+				<input type="text" name="" id="codeNum" style="width: 75%;" />
+				<div>   
+					<button id="sure" class="c_c22">确定</button>
+					<button id="cancel" class="c_c22">取消</button>
+				</div>      
+			</div> 
+			<!--<img src="../../../public/img/share.png" width="80%" style="margin: 0 auto;display: inline-block;" alt="" />-->
+			 
+		</div>  
+		<div id="personal-money" class="clearfix tc bg_ff7"  >
+				<div class="tc">
+					<div style=" height: 80px;width: 80px;margin: 0 auto;"  ><img src="" width="100%" style="border-radius: 50%;width: 80px;height: 80px;" alt="" id="header"  /></div>
+					<div style="margin-top: 0.5rem;">
+						<span id="userInfo" class="c_fff f14"></span>  
+					</div>  
+				</div>	
+			</div>
+		    
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" id="myShare" > 
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right c_696" ></span>
+					<!--<span class="c_ff7 mui-pull-right">邀请享好礼</span>-->
+					<span class="c_ff7 mui-pull-right" style="margin-right: 3%;" id="myCode"></span>
+					<span id="my-list-text" class="c_696">我的邀请码</span>
+				</a>
+			</li>
+			<li class="mui-table-view-cell" id="share">
+				<a href="javascript:void(0)"> 
+					<span class="mui-icon mui-icon-arrowright mui-pull-right c_696" ></span>
+					<span class="c_696">填写好友邀请码，助攻好友领奖励</span>
+					<!--<span id="rea" class="mui-pull-right c_c22"></span>-->
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<!--<li class="mui-table-view-cell user" hrefs="approve.html">
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right sty c_696" ></span>
+					<span id="my-list-text" class="c_696">实名认证</span>
+					<span id="rea" class="mui-pull-right c_ff7"></span>
+				</a>
+			</li>   -->
+			<li class="my-list-li mui-table-view-cell" id="a-evalua"  href ="bankcard.html">
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right c_696" ></span>
+					<span id="my-list-text" class="c_696">银行卡管理</span>
+				</a>
+			</li> 
+			<li class="my-list-li mui-table-view-cell" id="updatePassword"  href ="pwdmanager.html">
+						<a>
+							<span class="mui-icon mui-icon-arrowright mui-pull-right c_696" ></span>
+							<span id="my-list-text" class="c_696">密码管理</span>
+						</a>
+					</li>
+		</ul>
+		<div class="tc">  
+			<button class="" id="ext" style="color: red; width: 100%;height: 50px;font-size: 1.2rem;">
+				注销
+			</button>  
+			<button style="display: none;margin: 0 auto; width: 100%;height: 50px;font-size: 1.2rem;"  id="login" >
+				登录
+			</button>
+		</div>
+		<div id="photo" class="mui-popover mui-popover-action mui-popover-bottom">
+		  <ul class="mui-table-view">
+		    <li id="photoCamera" class="mui-table-view-cell">拍照</li>
+		    <li id="photoGallery" class="mui-table-view-cell">相册选择</li>
+		    <li id="photoChanel" class="mui-table-view-cell">取消</li>
+		  </ul>  
+		</div>
+</body>
+</html>

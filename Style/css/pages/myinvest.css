@@ -1,0 +1,37 @@
+.labelInfo{
+	margin-top: 1rem;
+}
+
+#topPopover{
+	position: fixed;
+	top: 0px;
+	bottom: 0;
+	/*right: 90px !important;*/
+}
+#topPopover .mui-popover-arrow {
+	left: auto;
+	right: 6px;
+}
+#iRecharge{
+	margin-right: 35%;
+}
+/*p {
+	text-indent: 22px;
+}
+span.mui-icon {
+	font-size: 14px;
+	color: #007aff;
+	margin-left: -15px;
+	padding-right: 10px;
+}*/
+.mui-popover {
+	/*border: 1px solid red;*/
+	height: 300px;
+	margin: 0 auto;
+}
+
+
+.product>div{
+	float: left;
+	width: 33.3%;
+}

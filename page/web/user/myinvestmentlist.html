@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的投资列表</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/myinvestmentlist.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+//    		
+      		seajs.use("../../../public/js/application/investmentlist_main");
+      	})
+    </script>
+</head>
+<body>    
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的投资</h1>
+		<button class="mui-pull-right  c_fff bg_ff7" style="margin-top: 0.5rem;border: none;" id="recharge">投资记录</button>
+	</header> 
+	<div class="mui-content clearfix">
+		<div class="menu mui-bar tc" style="margin-top: 0rem;padding: 0;">
+			<span class="status active" status =0>全部</span>
+			<span class="status " status =3>已收益</span>
+			<span class="status" status =1>待收益</span>
+			<span class="status" status =2>收益中</span>
+		</div>      
+		<!--图文列表-->      
+	    <div id="good-list" class="mui-scroll-wrapper">
+			<div class="mui-scroll" >
+				<!--数据列表-->
+				<ul id="image-text-list-ul" class="mui-table-view" style="background: #ccc;">
+					<!--<li class="mui-table-view-cell info">
+						<div class="title clearfix">
+							<h4 class="mui-pull-left">双融宝4期（3个月）</h4>
+							<span class="status mui-pull-right">已收益</span>
+						</div> 
+						<div class="contentBody clearfix">
+							<div class="mui-pull-left">
+								<p>起投金额</p>
+								<p>100</p>
+							</div>
+							<div class="mui-pull-left" style="border-left: 1px solid #000;border-right: 1px solid #000;">
+								<p>收益率</p>
+								<p>100</p>
+							</div>
+							<div class="mui-pull-left">
+								<p>总收益(元)</p>
+								<p>100</p>
+							</div>
+						</div>
+						<div>
+							<span class="f12">计息日：</span><span class="f12">2014-12-01</span>
+							&nbsp;&nbsp;
+							<span class="f12">到期日期：</span><span class="f12">2014-12-01</span>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+	
+</body>
+</html>

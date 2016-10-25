@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link href="../../../Style/css/pages/money.css" rel="stylesheet"/>
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8"> 
+//    	mui.init();
+      	$(function(){   
+      		seajs.use("../../../public/js/application/money");
+      	})
+    </script>     
+   
+</head>
+<body style="background: #f5f5f5 !important;">    
+	<header class="mui-bar mui-bar-nav" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+			<h1 class="mui-title "style="color: #FFFFFF;">投资理财</h1>
+	</header>
+	   
+	 <div class="mui-content" >
+	 	<!--<div class="clearfix">
+	 		<div class="menu mui-bar tc" id="menu" style="margin-top: 0rem;padding: 0;">
+				<!--<span class="status standBy active" id="standBy" status =0>1月</span>
+				<span class="status already" status =1>3月</span>
+				<span class="status profit" status =2>6月</span>-->
+			<!--</div>-->    
+	 	<!--</div>-->
+	 	 
+		<!--产品详情-->
+		<div style="margin-top: 0rem;height: 100%;" >
+			<div class="productTitle clearfix">
+				<p><h5 id="productName" class="c_333 mui-pull-left"></h5><span class="mui-pull-left c_666" id="breakEven" hrefs="breakeven">已加入《本息保护计划》</span></p>
+			</div>    
+			<div class="goodInfo clearfix">
+				<div>
+					<p class="c_333"><span>年化收益:</span><span  class="col" id="annualized_return"></span><span></span></p>
+					<p class="c_333"><span>起投金额:</span><span class="col" id="unit_price"></span>元 </p>  
+					
+					        
+					<p class="c_333"><span>起售日:</span><span id="buyBegin"></span></p>
+					<p class="c_333"><span>计息日:</span><span id="closeBegin"></span></p> 
+				</div>
+				<div> 
+					<p class="c_333"><span>投资期限:</span><span id="remark"></span>天</p>
+					<p class="c_333"><span>项目规模:</span><span class="col" id="cash_total"></span></p>
+					<p class="c_333"><span>截止日:</span><span id="buyEnd"></span></p>
+					<p class="c_333"><span>还款日:</span><span id="closeEnd"></span></p>
+				</div>
+				<p class="c_333 mui-pull-left" style="font-size: 1rem"><span>当前可购份额:</span><span class="col" id="nowBuy"></span>元</p>
+			</div>
+			
+		</div>
+		<!--产品详情图片-->
+		<div style="width: 100%;margin: 10px auto;" class="clearfix">
+			<div class="goodDtail" style="width: 100%;">
+				<img src="" width="100%" id="goodDtailImg" />
+			</div>   
+			 
+		</div>
+		
+		<!--<span style="" class="c_333" id="fPlan" hrefs="fplan">查看《87汇财产品说明》</span>-->
+	 </div> 
+	<button class="mui-btn bg_ff6 mui-bar mui-bar-tab" disabled="disabled" id="butto" >我要投资</button>
+</body>
+</html>

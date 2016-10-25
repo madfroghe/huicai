@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>通知设置</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+ 	<link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/more.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){  
+  			seajs.use("../../../public/js/application/notice_main");
+      	})
+    </script>
+</head> 
+<body>  
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">通知设置</h1>
+	</header>
+	<div class="mui-content" style="background: #fff;margin-top: 20px;">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				 
+				<span>充值操作</span> 
+				<div class="mui-switch mui-switch-mini" id="recharge">
+					<div class="mui-switch-handle"></div>
+				</div> 
+			      		                    
+			</li> 
+			<li class="mui-table-view-cell">
+				
+						<span>提现操作</span>
+						<div class="mui-switch mui-switch-mini" id="withdraw">
+  							<div class="mui-switch-handle"></div>
+						</div>
+			</li>
+			<li class="mui-table-view-cell">
+						<span>奖励兑换</span>
+						<div class="mui-switch mui-switch-mini " id="reward">
+  							<div class="mui-switch-handle"></div>
+						</div>
+			</li>
+			<li class="mui-table-view-cell">
+						<span>投资成功</span>
+						<div class="mui-switch mui-switch-mini" id="investment">
+  							<div class="mui-switch-handle"></div>
+						</div>
+			</li>
+			<li class="mui-table-view-cell">
+						<span>还本付息</span>
+						<div class="mui-switch mui-switch-mini" id="debt">
+  							<div class="mui-switch-handle"></div>
+						</div>
+			</li>			
+		</ul>
+		
+	</div>
+	<div class="more-notice">
+		<p>温馨提示</p>
+		<ul>
+			<li>1.为了你自己的安全，不建议你去掉重要的提醒。</li>
+			<li>2.如果你更换了邮箱、手机号，请你及时到安全设置页面修改。</li>
+			<li>3.使用过程遇到问题，请联系客服，4000-87-3387</li>
+		</ul>
+	</div>
+</body>
+</html>

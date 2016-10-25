@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">-->
+		<script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+     <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script src="../../../public/js/major/md5.js"></script>
+	<!--<script src="../../../public/js/md5.js"></script>--> 
+	 <script type="text/javascript" charset="utf-8">
+      	$(function(){            
+      		seajs.use("../../../public/js/application/shengfutong_main");
+      		
+      	})     
+    </script>
+              
+    <style type="text/css">
+    	#middlePopover{
+			position: fixed;
+			bottom: -5rem;
+		}
+		#middlePopover .mui-popover-arrow {
+			left: auto;
+			right: 3px;
+		}
+		.mui-popover {
+			height: 300px;
+			margin: 0 auto;
+		}
+		#middlePopover{
+			margin-bottom: 0;
+		}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" >
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">账户充值</h1>
+	</header>
+	<div class="mui-content" style="margin-top: 1rem;padding: 3rem 1rem;">
+		<h5  style="color:#666">*请选择充值方式：</h5>
+		<div class="mui-card" style="margin-top: 0.5rem;">
+			 
+			<form class="mui-input-group">
+				<div class="mui-input-row mui-radio mui-left">
+					<label>盛付通</label>
+					<input name="radio1" class="mui-selected" checked="checked" id="shenFuTong" type="radio">
+				</div>  
+			</form>
+		</div> 
+		<div class="tc" style="margin-top: 2rem;">
+			<button class="mui-btn  bg_ff6 c_fff" id="sureBtn" style="width: 80%;height: 40px;">确认充值</button>
+		</div> 
+		
+		
+		<div id="middlePopover"  class="mui-popover mui-popover-action">
+			<!--<div class="mui-scroll-wrapper"> 
+				<div class="mui-scroll">-->
+					<ul class="mui-table-view" style="margin-right: 2%;"> 
+						<li class="mui-table-view-cell">
+							<input type="password" id="trdePwd" placeholder="请输入交易密码" style="color: #000;" class="mui-input-clear mui-input"  />
+						</li>
+						<li class="mui-table-view-cell" id="sure"> 
+							确定
+						</li>       
+						<li class="mui-table-view-cell" id="cancel" >
+							取消
+						</li>
+						
+						<li class="mui-table-view-cell" id="forgetTrade">
+							忘记交易密码
+						</li>
+					</ul>
+					<!--<button class="mui-btn mui-btn-block mui-btn-danger">取消</button>
+					<button class="mui-btn">取消</button>-->
+				<!--</div>
+			</div>-->
+     
+		</div> 
+	</div> 
+	
+</body>    
+</html>

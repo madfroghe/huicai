@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/more_main.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+//    	mui.init();
+      	$(function(){
+      		seajs.use("../../../public/js/application/more");
+      	})
+    </script>
+</head>
+<body> 
+	<div class="mui-content" >
+			<div id="ext_Cover" style="position: absolute;z-index: 999;top: 0;padding: 0 10%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+				<div class="tc" style="25rem;height: 8rem;margin: 45% auto;padding:1rem 0;background:#fff;border-radius:5px ;">
+					<h4 style="color:#ff7f00;margin-bottom: 0.6rem;">温馨提示</h4>
+					<p>亲,真的要离开吗?</p>
+					<div style="margin-top:0.8rem">
+						<button id="sure_Btn" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">是</button>
+						<button id="cancel_Btn" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>
+					</div>
+				</div>
+			</div>
+			<div id="my-one">
+				<ul id="my-list-ul-one" class="mui-table-view" style="margin-top: 0px;">
+					<li class="my-list-lis mui-table-view-cell" id="acountInfo">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/acounticon.png" />
+							<span class="my-list-text">账户管理</span>
+						
+					</li>      
+					<li class="my-list-li mui-table-view-cell" id="a-mycollection" hrefs="affiche.html">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge5.png" />
+							<span class="my-list-text">系统公告</span>
+					</li>
+					<li class="my-list-li mui-table-view-cell" id="a-userInfo" hrefs="aboutus.html">
+						<a>
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge2.png" />
+							<span class="my-list-text">关于87汇财</span>
+						</a>
+					</li>
+					<!--<li class="my-list-li mui-table-view-cell" id="a-myOrders" hrefs="notice.html">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge.png" />
+							<span id="my-list-text">通知设置</span>
+						
+					</li>-->
+					 
+					</ul>
+					
+					<ul  class="mui-table-view" style="margin-top: 20px;">
+					
+					<!--<li class="my-list-li mui-table-view-cell" id="a-open" hrefs="news.html">
+						<a href="javascript:void(0)">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge3.png" />
+							<span id="my-list-text">新闻媒体</span>
+						</a>
+					</li>   -->
+					<li class="my-list-li mui-table-view-cell" id="a-evalua" hrefs="help.html">
+						<a href="javascript:void(0)">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge4.png" />
+							<span class="my-list-text">帮助中心</span>
+						</a>
+					</li>
+					<li class="my-list-tels mui-table-view-cell" id="a-address">
+						<a href="tel:400-087-3387">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge6.png" />
+							<span class="my-list-text">联系客服</span>
+							<p id="contact">400-087-3387</p>
+						</a>
+					</li>
+
+				</ul>  
+				<ul  class="mui-table-view" style="margin-top: 20px;display: none;"id="update"  >
+					<!--<li class="my-list-li mui-table-view-cell" id="a-userInfo" hrefs="aboutus.html">
+						<a>
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge2.png" />
+							<span id="my-list-text">关于我们</span>
+						</a>
+					</li>-->
+					
+					<li class="my-list-lis mui-table-view-cell" >
+						<a>
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img class="my-list-image" src="../../../public/img/ge7.png" />
+							<span class="my-list-text">版本更新</span>
+							<p id="check"><span>当前版本</span><span id="checks">1.8.2</span></p>
+						</a> 
+					</li> 
+					
+				</ul>
+				<!--<div style="margin-top: 1rem;" class="tc">
+					<button class="" id="ext" style="color: red; width: 90%;height: 50px;font-size: 1.2rem;">
+						退出
+					</button>
+					<button style="display: none;margin: 0 auto; width: 90%;height: 50px;font-size: 1.2rem;"  id="login" >
+						登录
+					</button>
+				</div>-->
+			</div>
+		</div>
+</body>
+</html>

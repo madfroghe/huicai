@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+	<link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+	<link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+    mui.plusReady(function(){
+    	self = plus.webview.currentWebview();
+		 var pageId = self.pageId;
+    	mui('#reload')[0].addEventListener('tap',function(){
+    		mui.fire(plus.webview.getWebviewById(pageId),"reLode");
+    		mui.back();
+    	})
+    	
+    })
+      	mui.init();
+    </script>
+    <style type="text/css">
+    .mui-content{
+    	padding: 0.3rem 0.5rem;
+    }
+    	.mui-content li{
+    		margin-top: 0.5rem;
+    		list-style-type: decimal;
+    	}
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">网络无法链接</h1>
+	</header>
+	<div class="mui-content tc"style="margin-top: 25%;">
+		<div>
+			<img src="../../../public/img/timeout.gif" width="45%" alt="" />
+		</div>
+		<div class="tc">
+			<p class="f18" style="line-height: 1.6rem;">亲，您的网络开小差啦，<br /> 赶紧让他上班吧!</p>
+			
+		</div>
+		<button class="mui-btn bg_ff6 c_fff " id="reload" style="margin-top: 0.5rem;">
+			重新加载
+		</button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>注册</title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+   <script src="../../../public/js/major/mui.locker.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link href="../../../Style/css/pages/withdraw.css" rel="stylesheet"/>
+     <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/md5.js"></script> 
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/withdraw"); 
+      	}) 
+    </script>         
+</head>          
+<body >
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">提现</h1>
+	</header>
+	<div class="mui-content">
+		<div style="width: 100%;background-color: #fff;margin-top: 20px;position: relative;">
+			<div id="addition_b">
+			</div> 
+			<div class="mui-input-row">
+				   <div style="padding: 1rem 0.9rem;">
+				   	<span class="f16 c_333">可用余额</span>
+				   	<span id="available" class="c_ff6 mui-pull-right" style="display:inline-block"></span>
+				   </div>     
+			</div> 
+			<div class="mui-input-row" >
+				<div style="padding: 1rem 0.9rem;">
+					<span class="f16 c_333">可免费提现金额</span>
+					<span class="mui-pull-right"><font id="actual_b" color="#FF6600" >0.0</font>元</span> 
+				</div> 
+				<!--<p class="f16 c_333 ">&nbsp;&nbsp;&nbsp;-->
+				
+			</div>      
+			<!--<div class="mui-input-row" style="height: 3.5rem;">-->
+			<div class="clearfix" style="border-bottom: 1px solid #ccc;"> 
+				<div style="padding:0.3rem 0.9rem;">
+					<span style="width: 40%;display: inline-block;height: 100%;padding: 0.3rem 0;" class="c_333 mui-pull-left">提现金额</span>
+					<input style="width: 60%;" id="withdrawal" style="border: none;" type="text"height="30px" class="mui-input-clear f14 mui-pull-right tr"  onkeyup="if(isNaN(value))execCommand('Delete')" onafterpaste="if(isNaN(value))execCommand('Delete')" placeholder="最低提现金额为100元">
+				</div>
+			</div> 
+				
+				
+				<!--<div id="withdraw">元</div>  -->     
+			<!--</div>-->   
+			<div class="mui-input-row" > 
+				<div style="padding: 1rem 0.9rem;">
+					<span class="f16 c_333">提现手续费</span>
+					<span class="mui-pull-right"><font id="actual_a" color="#FF6600">0.00</font>元</span>
+				</div>
+			</div>   
+			<div class="mui-input-row" >
+				<div style="padding: 1rem 0.9rem;">
+					<span class="f16 c_333">应实际到账</span>
+					<span class="mui-pull-right"><font id="actual" color="#FF6600">0.00</font>元   </span>
+				</div>
+			</div> 
+		      
+			<div id="additio" class="mui-input-row" style="height: 3.5rem;padding: 0.5rem 0rem;">
+				<label style="width: 34%;" class="c_333">提现银行</label>
+				<input id="bank" style="width: 65%;" type="text"  placeholder="" readonly="true">
+				<!--<div id="addition">添加</div>-->
+				       	
+			</div>         
+		</div>
+		<div id="clic_k">
+			<!--<div id="clic_ka">
+				<!--<div id="clic_kb"></div>--> 
+				
+			<!--</div>-->
+			
+			<!--<input name="radio1" type="checkbox" id="check" checked>
+			<p class="c_ff6 f16">我已阅读并确认重要提示信息</p>-->
+		</div>
+		<div class="tc"style="margin-top: -2rem;"> 
+			<button id="confirm"  style="">确认</button>
+		</div>
+		<p id="checks" class="tc">  
+							<!--<input name="radio1" type="checkbox" id="check" checked>-->
+						<label class="f16"><span id="notice">提现须知</span></label>
+						<!--<a href="javascript:void(0)" class="c_ff6" id="registerAgreement" hrefs="registeragreement">《八锂米用户注册协议》</a>-->
+						</p> 
+	 <!--//手势密码--> 
+	 <div id="middlePopover" style="height: 300px;bottom: 0;" class="mui-popover mui-popover-action">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view" >
+						<li class="mui-table-view-cell" bankId="13">
+							<input type="password" id="trdePwd" placeholder="请输入交易密码" style="color: #000;"  />
+						</li>
+						<li class="mui-table-view-cell" id="sure">
+							确定
+						</li> 
+						<li class="mui-table-view-cell" id="cancel" >
+							取消
+						</li>
+						        
+						<li class="mui-table-view-cell" id="forgetTrade">
+							忘记交易密码
+						</li>
+					</ul>
+					<!--<button class="mui-btn mui-btn-block mui-btn-danger">取消</button>
+					<button class="mui-btn">取消</button>-->
+				</div>
+			</div>
+   
+		</div>
+	 
+	 
+	 
+	 
+	 <!--<div id="middlePopover"  class="mui-popover mui-popover-action" style="bottom: 1rem;">
+			<div class="mui-content">
+			<div id='alert'>请输入手势密码</div>
+			<div id='holder' class="mui-locker" data-locker-options='{"ringColor":"rgba(250,128,42,1)","fillColor":"#ffffff","pointColor":"rgba(0,136,204,1)","lineColor":"rgba(0,136,204,1)"}' data-locker-width='300' data-locker-height='300'></div>               
+		</div>   
+		<div class="mui-pull-right" style="margin-bottom: 3.5rem;" >
+			<button class="mui-pull-right" id="cancel" style="border: none;">取消</button> 
+ 			<button id="forgetHand" class="f14 c_ff6 mui-pull-right" style="border: none;margin-right: 1rem;">忘记手势密码</button>
+		</div>
+		</div> -->
+		           
+		
+	</div>  
+	<!--银行列表-->     
+		<div id="bankList"  style="height: 14rem;" class="mui-popover mui-popover-action">
+
+			
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll" >     
+					<ul class="mui-table-view" id="mui-list">
+					</ul>   
+				</div>        
+			</div>      
+	
+		</div> 
+	
+	<!--<footer class="mui-bar mui-bar-footer" >
+	<ul class="mui-table-view">    
+	  <li class="mui-table-view-cell" id="notice">
+	    <a class="mui-navigate-right" href="javascript:void(0)">
+	      温馨提示
+	    </a>
+	  </li>  
+	</ul>
+	</footer>-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+.mui-bar-nav{
+	background: #ff7f00;
+	height: 46px;
+}
+.mui-bar-nav:after{
+	height: 0px;
+}
+.mui-title{
+	color: #fff;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+/*首页子页面样式*/
+.menuLeader{
+	border: 1px solid #ccc;
+	background: #fff;
+	/*padding-top: 1rem;*/
+	width: 100%;
+}
+.menuLeader>div{
+	width: 32%;
+	padding-top: 0.5rem;
+	/*padding: 1.2rem;*/
+	text-align: center;
+	display: inline-block;
+	
+	
+}
+#image-text-list-ul{
+	width: 95%;
+	margin: 10px auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+/*我的投资样式开始*/
+

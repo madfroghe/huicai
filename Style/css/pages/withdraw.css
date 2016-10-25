@@ -1,0 +1,135 @@
+.mui-table-view-cell:after{
+    		height: 0px;
+    	}
+    	.mui-table-view:after{
+    		height: 0px;
+    	}
+    	.mui-input-row{
+    		border-bottom: 1px solid #DDDDDD;
+    	}
+    	#addition{
+    		position: absolute;
+    		right: 0px;
+    		width: 20%;
+    		height: 30px;
+    		background-color: #ff6600;
+    		margin-right: 10px;
+    		margin-top: 4px;
+    		line-height: 30px;
+    		text-align: center;
+    		color: #fff;
+    		border-radius: 5px;
+    	}
+    	
+    	#additio{
+    		position: relative;
+    	}
+    	#addition_a{
+    		position: absolute;
+    		right: 23%;
+    		width: 10%;
+    		height: 25px;
+    		background-color: #ff6600;
+    		margin-right: 5px;
+    		margin-top: 7px;
+    		line-height: 25px;
+    		text-align: center;
+    		color: #fff;
+    		border-radius: 5px;
+    	}
+    	#addition_b{
+    		position: absolute;
+    		z-index: 4;
+    		/*top: -40px;*/
+    		top: 125px;
+    		right: 23%;
+    		width: 60%;
+    		padding: 10px;
+    		/*height: 25px;*/
+    		background-color: #e7e7e9;
+    		margin-right: 5px;
+    		/*margin-top: 7px;*/
+    		line-height: 25px;
+    		text-align: center;
+    		color: #fff;
+    		border-radius: 5px;
+    		display:none ;
+    	}
+    	#addition_b>p{
+    		margin: 5px 0px;
+    		color: #000000;
+    		border: 1px solid #B8B9B9;
+ 			border-radius: 5px;   	
+    	}
+    	#retrieve{
+    		position: absolute;
+    		z-index: 4;
+    		right: 0px; 
+    		width: 20%;
+    		height: 30px;
+    		background-color: #ff6600;
+    		margin-right: 10px;
+    		margin-top: 4px;
+    		line-height: 30px;
+    		text-align: center;
+    		color: #fff;
+    		border-radius: 5px;
+    	}
+    	#confirm{
+    		width: 75%;
+    		/*height: 40px;*/
+    		margin: 10px auto;
+    		background-color: #FF6600;
+    		border-radius: 5px;
+    		line-height: 30px;
+    		text-align: center;
+    		border: none;
+    		color:#fff;
+    	}
+    	#clic_k{
+    		width: 75%;
+    		margin: 0px auto;
+    		height: 40px; 
+    		border: 0px;
+    		color: #002aff;
+    		margin-top: 10px;
+    		line-height: 40px;
+    	}
+    	#clic_ka{
+    		width: 20px;
+    		height: 20px;
+    		float: left;
+    		margin-top: 9px;
+    		margin-right: 5px;
+    		border: 1px solid #002aff;
+    		border-radius: 100%;
+    		padding:4px;
+    	}
+    	#clic_kb{
+    		width: 100%;
+    		height: 100%;
+    		background-color:#002aff;
+    		border-radius: 100%;
+    		display:none;
+    	}
+		#ban{
+			display: none;
+		}
+		
+		
+		/*手势密码样式*/
+		
+		#holder {
+				width: 300px;
+				height: 300px;
+				/*border: solid 1px #bbb;*/
+				border-radius: 5px;
+				margin: 0px auto 5px auto;
+				background-color: #efeff4;
+			}
+			#alert {
+				text-align: center;
+				padding: 20px 10px;
+			}
+		
+		

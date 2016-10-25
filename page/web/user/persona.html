@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+   <script src="../../../public/js/major/config.js"></script>
+   <link rel="stylesheet" type="text/css" href="../../../Style/css/pages/mui.picker.min.css"/>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <script src="../../../public/js/application/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style>
+    body{
+    	background-color: #FFFFFF;
+    }
+    .datu{
+    	border-bottom: 1px solid #C7C7CC;
+    	height: 50px;
+    }
+    .datu>label{
+    	text-align: left;
+    	padding: 0px; 
+    	/*background-color: red;*/
+    	height: 50px;
+    	line-height: 50px;
+    }
+    .datu>input[type='text']{
+    	/*background-color: royalblue;*/
+    	height: 50px;
+    }
+    #tj{
+    	width: 80%;
+    	height: 40px;
+    	background-color: red;
+    	margin: 20px auto;
+    	border-radius: 10px;
+    	color: #FFFFFF;
+    	line-height: 40px;
+    	text-align: center;
+    }
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+			<h1 class="mui-title "style="color: #FFFFFF;">个人信息</h1>
+	</header>
+	<div class="mui-content" style=" padding: 0px 10px; margin-top: 60px;background-color: #FFFFFF;">
+		
+		
+		
+		<div class="mui-input-row datu">
+				<label>用户名:</label>
+				<input type="text" id="username" placeholder=""  readonly="">
+		</div>
+
+		
+		<div class="mui-input-row datu">
+				<label>真实姓名:</label>
+				<input type="text" id="realname" readonly="readonly">
+		</div>
+
+		
+		<div class="mui-input-row datu">
+				<label>手机:</label>
+				<input type="text" id="telephone" readonly="readonly">
+		</div>
+
+
+		
+		<div class="mui-input-row datu">
+				<label>邮箱地址:</label>
+				<input type="text" id="email" readonly="readonly" >
+		</div>
+
+
+		
+		<div class="mui-input-row datu">
+				<label>性别:</label>
+				<div style="margin-left:-15px ;" class="mui-radio mui-pull-left">
+					<label>男</label>
+					<input name="sex" value="0" type="radio" checked>
+				</div>
+				<div class="mui-radio mui-pull-left">
+					<label>女</label>
+					<input name="sex" value="1" type="radio" >
+				</div>
+				<!--<div style="width: 100px;height: 100%;background-color: red;"></div>-->
+		</div>
+
+
+		
+		<div class="mui-input-row datu">
+				<label>生日:</label>
+				<input type="text" id="birthday" readonly="readonly" placeholder="">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>民族:</label>
+				<input type="text" id="nation" placeholder="">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>固定电话:</label>
+				<input type="text" id="fixed" >
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>所在地:</label>
+				<input type="text" id="protocity" placeholder="">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>联系地址:</label>
+				<input type="text" id="address" placeholder="请输入联系地址">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>邮政编码:</label>
+				<input type="text" id="zipcode" placeholder="请输入邮政编码">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>所在行业:</label>
+				<input type="text" id="industry" placeholder="">
+		</div>
+
+
+
+		
+		<div class="mui-input-row datu">
+				<label>年收入:</label>
+				<input type="text" id="income" placeholder="">
+		</div>
+
+		<div class="mui-input-row datu">
+				<label>学历:</label>
+				<input type="text" id="education" placeholder="">
+		</div>
+		
+		<div class="mui-input-row datu">
+				<label>婚姻状态:</label>
+				<input type="text" id="memarry" placeholder="">
+		</div>
+		
+		<div class="mui-input-row datu">
+				<label>QQ:</label>
+				<input type="text" id="myqq" placeholder="请输入QQ号">
+		</div>
+
+<div id="tj" style="">提交</div>
+</div>
+
+<script type="text/javascript">
+	mui.plusReady(function(){
+		var nwaiting = plus.nativeUI.showWaiting();//显示原生等待框
+            var  url = getUrlParam()+"/userInfo";
+            var user_id = plus.storage.getItem("user_id");
+			var appkey = plus.storage.getItem("appkey");
+//			alert(mui('input')[0].value)
+      		mui.ajax({
+					type: "get",
+				    dataType: "json",
+				    url:url,
+				    data:{
+				    	user_id:user_id,
+				    	appkey:appkey
+				    	
+				    }, 
+				    success:function(data){ 
+				    nwaiting.close(); //新webview的载入完毕后关闭等待框
+				    console.log(123)
+				    console.log(JSON.stringify(data)) 
+				    if(data.status==1){
+				    	var sex= data.data.sex;
+				           	var obj = document.getElementsByName("sex");
+						    for(var i=0; i<obj.length; i ++){
+						    	if(sex ==obj[i].value){
+						    		obj[i].checked = true;
+						    	}
+						    }
+				    	mui('#username')[0].value=data.data.username;
+					    mui('#realname')[0].value=data.data.realname;
+					    mui('#telephone')[0].value=data.data.telephone;
+					    mui('#email')[0].value=data.data.email;
+					    mui('#birthday')[0].value=data.data.birthday;
+					    mui('#nation')[0].value=data.data.nation;
+					    mui('#fixed')[0].value=data.data.fixed;
+					    mui('#address')[0].value=data.data.address;
+					    mui('#protocity')[0].value=data.data.protocity;
+					    mui('#zipcode')[0].value=data.data.zipcode;
+					    mui('#industry')[0].value=data.data.industry;
+					    mui('#income')[0].value=data.data.income;
+					    mui('#education')[0].value=data.data.education;
+					    if(data.data.ismarry==2){
+					    	 mui('#memarry')[0].value="已婚";
+					    }else{
+					    	mui('#memarry')[0].value="未婚";
+					    }
+					   
+					    mui('#myqq')[0].value=data.data.myqq;
+					    
+				    }else{
+				    	nwaiting.close(); //新webview的载入完毕后关闭等待框
+				    	mui.toast(data.msg);
+				    }
+				    
+				},error:function(e){
+					nwaiting.close(); //新webview的载入完毕后关闭等待框
+					var btnArray = ['重新加载','取消'];
+					mui.confirm('耽误您的时间，我们深感抱歉', '提示', btnArray, function(e) {
+						if (e.index == 0) {
+							window.location.reload();
+						}
+					})
+				}
+      		})
+      		
+      			//选择生日
+      		document.getElementById("birthday").addEventListener('tap', function(e) {
+				var dDate = new Date();
+				dDate.setFullYear(1990, 7, 16);
+				var minDate = new Date();
+				minDate.setFullYear(1900, 0, 1);
+				var maxDate = new Date();
+				maxDate.setFullYear(maxDate.getFullYear(), 11, 31);
+				plus.nativeUI.pickDate(function(e) {
+					var d = e.date;
+					document.getElementById("birthday").value =  d.getFullYear() + "-" + ((d.getMonth() + 1)<10?'0'+(d.getMonth() + 1):(d.getMonth() + 1)) + "-" + (d.getDate()<10?'0'+(d.getDate()):(d.getDate()));
+				}, function(e) {
+					mui.toast("您没有选择日期");
+				}, {
+					title: "请选择日期",
+					date:new Date(document.getElementById("birthday").value),
+					minDate: minDate,
+					maxDate: maxDate
+				});
+			}) 
+      		
+      		mui("#tj")[0].addEventListener("tap", function(){
+      			var nwaiting = plus.nativeUI.showWaiting();//显示原生等待框
+      			var ismarry=0;
+      			if(mui('#memarry')[0].value=="已婚"){
+				    	 ismarry=2;
+				    }else{
+				    	ismarry=0;
+				    }
+      			
+      				var sex= '';
+	           	var obj = document.getElementsByName("sex");
+					    for(var i=0; i<obj.length; i ++){
+					        if(obj[i].checked){
+					           sex = obj[i].value;
+					        }
+					    }
+      		mui.ajax({
+					type: "get",
+				    dataType: "json",
+				    url:getUrlParam()+"/setUserInfo",
+				    data:{
+				    	user_id:user_id,
+				    	appkey:appkey,
+					    "username": mui('#username')[0].value,
+						"realname": mui('#realname')[0].value,
+						"telephone": mui('#telephone')[0].value,
+						"email": mui('#email')[0].value,
+						"birthday": mui('#birthday')[0].value,
+						"nation": mui('#nation')[0].value,
+						"fixed": mui('#fixed')[0].value,
+						"income": mui('#income')[0].value,
+						"sex":sex,//1、2
+						"protocity": mui('#protocity')[0].value,
+						"address": mui('#address')[0].value,
+						"zipcode": mui('#zipcode')[0].value,
+						"industry": mui('#industry')[0].value,
+						"education": mui('#education')[0].value,
+						"ismarry": ismarry,//0/2
+						"myqq": mui('#myqq')[0].value,
+				    }, 
+				    success:function(data){ 
+				    	nwaiting.close(); //新webview的载入完毕后关闭等待框
+				    	console.log(JSON.stringify(data));
+				    	if(data.status==1){
+				    		mui.toast(data.msg);
+					    	mui.openWindow({
+					    		url:"acuntmanager.html",
+					    		id:"acuntmanager.html",
+					    		styles:{
+					    			top:0,
+					    			bottom:0
+					    		}
+					    	})
+				    	}else{
+				    		mui.toast(data.msg);
+				    	}
+//				    	
+				    	
+				    },error:function(){
+				    	nwaiting.close(); //新webview的载入完毕后关闭等待框
+						var btnArray = ['重新加载','取消'];
+						mui.confirm('耽误您的时间，我们深感抱歉', '提示', btnArray, function(e) {
+							if (e.index == 0) {
+								window.location.reload();
+							}
+						})
+				    }
+				    
+      		})
+      		})
+	})
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>添加银行</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/addbankcard.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/addbankcard_main");
+      	})
+    </script>
+</head>
+<body>   
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">添加银行卡</h1>
+	</header>
+	<div class="mui-content"> 
+		<div class="titles tc">
+			<p class="c_c22">*请绑定持卡人本人的银行卡</p>
+		  
+		</div>  
+		<div id="textInfo">
+			<div id="bankName">
+				<label for="bank">所属银行</label><input type="text" readonly="readonly" id="bank" placeholder="所属银行" />
+			</div>
+			<div id="bankddr">
+				<label for="bankAddr">开户地址</label><input id="bankAddr" readonly="readonly" type="text" placeholder="开户地址" />
+			</div> 
+			<div>    
+				<label for="bankNumber">银行卡号</label><input type="number" name="" id="bankNumber" value="" placeholder="请输入卡号" />
+			</div>       
+		</div> 
+		<div  class="tc" style="margin-top: 2rem;">         
+			<button class="mui-btn bg_ff7" id="addBtn">确认添加</button>
+		</div>
+		      
+		<!--银行列表-->     
+		<div id="middlePopover"  class="mui-popover mui-popover-action">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">     
+					<ul class="mui-table-view" id="mui-list">
+						 
+					</ul>  
+				</div>
+			</div>     
+	
+		</div>
+	    
+	<!--地址选择-->
+	<div id="bottomPopover" style="height:25%;width: 60%; background: #Fff; top: 240px;left: 20%;" class="mui-popover">
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="mui-table-view">
+					<form class="mui-input-group" style="color: #000;">
+					<div class="mui-input-row"  style="border:none">
+						<label>省</label>
+						<input type="hidden" name="areaId1" id="areaId1"/>
+						<select id="areaId01"><option value="">请选择</option></select>
+					</div>
+					<div class="mui-input-row">
+						<label>市</label>
+						<input type="hidden" name="areaId2" id="areaId2"/>
+						<select id="areaId02"><option value="">请选择</option></select>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

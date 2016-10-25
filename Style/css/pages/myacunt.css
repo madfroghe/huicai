@@ -1,0 +1,116 @@
+ 
+			#personal-image {
+				height: 90px;
+				width: 100%;
+				margin: 10px 0px;
+			}
+			#my-one {
+				margin-bottom: 5px;
+			}
+			.my-list-li {
+				/*height: 60px;
+				line-height: 40px;*/
+				/*border-top: #E1E1E8 10px solid;*/
+			}
+			#my-list-image {
+				height: 24px;
+				width: 24px;
+				display: inline;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+			.my-list-text {
+				vertical-align: middle;
+				margin-left: 20px;
+				color: #55585b;
+			}
+			#my-list-ul-two {
+				/*margin-top: 8px;*/
+			}
+			
+#imgt {
+				width: 40%;
+				height: 100%;
+				padding: 0px;
+				margin: 0px;
+				float: left;
+			}
+			#enter {
+				width: 60%;
+				height: 100%;
+				padding: 0px;
+				margin: 0px;
+				/*background-color: red;*/
+				line-height: 90px;
+				color: #a0a5ab;
+				font-size: 12px;
+				float: right;
+			}
+			#enterw {
+				width: 80px;
+				height: 30px;
+				padding: 0px;
+				margin-top: 30px;
+				margin-right: 20px;
+				border-radius: 10px;
+				background-color: #4C97EA;
+				line-height: 30px;
+				text-align: center;
+				color: #FFFFFF;
+				font-size: 12px;
+				float: right;
+			}
+			#check {
+				float: right;
+			}
+			.sty {
+				color: #b8b9b9;
+			}
+			#sss{
+			width: 40%;
+			height: 100%;
+			line-height: 90px;
+			/*background-color: red;*/
+			margin-left: 50%;
+			}
+			#contorlBtn{
+				margin-top: 1rem;
+			}
+			.borderDiv{
+				border-right: 1px solid #ccc;
+				border-left: 1px solid #ccc;
+			}
+			#personal-money{
+				background: #ff7f00;
+			}
+			
+			
+			
+.earnings{
+	margin-top: 1rem;
+	border-top: 1px solid #ccc;
+}			
+.earnings>div{
+	width: 50%;
+	padding: 1rem 0;
+}
+.controlBtn{
+	padding: 1rem 0;
+}
+.controlBtn>button{
+	width: 40%;
+	height: 3rem;
+	font-size: 1rem;
+}
+#withdraw{
+	margin-left: 6%;
+}
+#my-one>div{
+	margin-bottom: 0.6rem;
+}
+.mui-table-view:after{
+	height: 0px !important;
+}
+.tableInfo{
+	display: none; 
+}

@@ -1,0 +1,61 @@
+/*更多的界面*/
+			 
+#personal-image {
+	background: url(../../../public/img/bg.jpg) no-repeat;
+	background-size: cover;
+}
+#imgt>img {
+	/*height: 80px;
+	width: 80px;*/
+	/*display: block;*/
+	/*margin: 5px auto;*/
+	/*margin-left: 20px;*/
+}
+#enterw{
+	width: 30%;
+	border-radius: 5px;
+	color: #fff;
+	margin: 0 auto;
+}
+#my-one {
+	margin-bottom: 5px;
+}
+.my-list-li,.my-list-tels ,.my-list-lis{
+	height: 60px;
+	line-height: 40px;
+	/*border-top: #E1E1E8 10px solid;*/
+}
+.my-list-image {
+	height: 1.5rem;
+	width: 1.5rem;
+	display: inline;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.my-list-text {
+	vertical-align: middle;
+	margin-left: 20px;
+	color: #55585b;
+}
+#my-list-ul-two {
+	/*margin-top: 8px;*/
+}
+/*我的界面end*/
+
+
+#check,#contact{
+	float: right;
+}
+.sty {
+	width: 15px;
+	height: 30px;
+	margin: 12px 10px;
+	color: #b8b9b9;
+}
+#sss{
+width: 40%;
+height: 100%;
+line-height: 90px;
+/*background-color: red;*/
+margin-left: 50%;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>修改密码</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+ 	<link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/more.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		mui("#weixin")[0].addEventListener("tap",function(){
+      			$("#Mycode").show(300);
+      		})
+      		mui("#Mycode")[0].addEventListener("tap",function(){
+      			$("#Mycode").hide(300);
+      		})
+      		
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">关于我们</h1>
+	</header>
+	<div class="mui-content tc" style="background: #fff;margin-top: 20px;">
+		<div id="Mycode" style="position: absolute;z-index: 999;top: 0;padding: 0 10%;width: 100%;height:100%;display: none;background: rgba(0,0,0,0.5);">
+			<div class="tc" style="margin: 25% auto;padding-top: 4.3rem;">
+				
+				<img src="../../../public/img/liantu.jpg" alt="" width="100%"/>
+				<!--<h3 style="color: #fdd23e;margin-bottom: 0.6rem;">请填写邀请码</h3>
+				<input type="text" name="" id="codeNum" style="width: 75%;" />
+				<div> 
+					<button id="sure" class="c_c22">确定</button>
+					<button id="cancel" class="c_c22">取消</button>
+				</div>      -->
+			</div> 
+			<span style="color: #fff;">打开微信扫一扫关注我们</span>
+			<!--<img src="../../../public/img/share.png" width="80%" style="margin: 0 auto;display: inline-block;" alt="" />-->
+			
+		</div> 
+		
+		<ul class="mui-table-view more-table">
+			<li class="mui-table-view-cell mui-media">
+				<a href="tel:400-087-3387">
+					<div class="mui-media-body">
+						<div class="more-lable">客服电话:</div>
+						<div class="more-input">400-087-3387</div>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<!--<a href="tel:400-087-3387">-->
+					<div class="mui-media-body">
+						<div class="more-lable">公司名称:</div>
+						<div class="more-input">成都壹捌柒信息技术有限公司</div>
+					</div>
+				<!--</a>-->
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<!--<a href="tel:400-087-3387">-->
+					<div class="mui-media-body">
+						<div class="more-lable">公司地址:</div>
+						<div class="more-input">成都市武侯区二环路南四段<br />51号莱蒙都会2栋910</div>
+					</div>
+				<!--</a>-->
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<!--<a href="tel:400-087-3387">-->
+					<div class="mui-media-body">
+						<div class="more-lable">公司官网:</div> 
+						<a href="http://www.87huicai.com"><div class="more-input">http://www.87huicai.com</div></a>
+					</div>
+				<!--</a>-->
+			</li>
+			<li class="mui-table-view-cell mui-media" id="weixin">
+				<!--<a href="tel:400-087-3387">-->
+					<div class="mui-media-body">
+						<div class="more-lable">微信公众号:</div>
+						<div class="more-input f18">P2F汇财</div>
+						<span><img src="../../../public/img/liantu.jpg" width="30px"/></span>
+					</div>
+				<!--</a>-->
+			</li>
+		</ul>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>我的账户</title>
+	    <script src="../../../public/js/major/mui.min.js"></script>
+	    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+	    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+	    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="../../../Style/css/pages/myacunt.css" />
+	    <script src="../../../public/js/major/jquery.js"></script>
+	    <script src="../../../public/js/major/sea/sea.js"></script>
+	    <script src="../../../public/js/major/config.js"></script>
+	    <script type="text/javascript" charset="utf-8">
+//	      	mui.init();
+	      	//打开去投资页面
+	      	$(function(){
+	      		seajs.use("../../../public/js/application/myacount_main");
+	      	})
+	      	
+	    </script> 
+	</head> 
+	<body> 
+		 
+		<!--<header class="" >
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">我的账户</h1>
+	</header>--> 
+	<div class="mui-content" >
+		<div id="ext_Cover" style="position: fixed;z-index: 999;top: 0;padding: 0 10%;width: 100%;height:100%;background: rgba(0,0,0,0.5);display: none;">
+				<div class="tc" style="25rem;height: 8rem;margin: 45% auto;padding:1rem 0;background:#fff;border-radius:5px ;">
+					<h4 style="color:#ff7f00;margin-bottom: 0.6rem;">温馨提示</h4>
+					<p>亲,真的要离开吗?</p>
+					<div style="margin-top:0.8rem">
+						<button id="sure_Btn" style="background:#ff7f00;color:#fff;width:7rem;border:none;" class="c_c22">是</button>
+						<button id="cancel_Btn" style="margin-left:1.5rem;background:#ff7f00;color:#fff;width:7rem;border:none" class="c_c22">否</button>
+					</div>
+				</div>
+			</div>
+			<div id="personal-money" class="clearfix tc"  >
+				<div class="tc">    
+					<div  id="headerImg" style=""><img src="" style="border-radius: 50%;width: 80px;height: 80px;" alt="" id="userPhoto" /></div>
+					<div style="margin-top: 0.2rem;">   
+						<span id="userInfo" class="c_fff " style="font-size: 0.8rem;"></span>
+						<div id='myMoney' class="c_fff" style="margin-top: 0.1rem;" ><label style="font-size: 0.8rem;" >总资产(元)</label></div>
+						<div style="margin-top: 0.8rem;"><span id="availableMoneys"   class="c_fff" style="font-size: 2rem;"></span></div>
+					</div> 
+				</div>  
+				<div class="earnings clearfix">
+					<div class="mui-pull-left tc bg_ff7" >
+						<p class="c_fff"><span class="" style="font-size: 0.8rem;">可用余额（元）</span></p>
+						<p class="c_fff"style="font-size: 2rem;width: 100%;" id="availableMoney"></p>
+					</div> 
+					<div class="mui-pull-left tc bg_ff7" >  
+						<p class="c_fff f16"><span class="mui-icon "></span><span style="font-size: 0.8rem;">累计收益（元）</span></p>
+						<!--<span class="c_fff f18" id="waitMoney" style="font-size: 2rem;display: inline-block;width: 80%;">110</span>-->
+						<p class="c_fff"style="font-size: 2rem;width: 100%;" id="waitMoney"></p>
+					</div>
+				</div>	
+			</div>  
+			<div class="clearfix controlBtn tc" style="">
+				<button class="mui-btn bg_ff7 c_fff" id="recharge">充值</button>
+				<button class="mui-btn  c_ff7" id="withdraw">提现</button>
+			</div>    
+			
+			
+			<div id="my-one">
+				<div>
+					<div style="background: #fff;padding:1rem 1.2rem;" id="myInvest" class="c_666">我的投资
+						<span class="mui-icon mui-icon-arrowright mui-pull-right c_ccc" ></span>
+					</div>         
+					<ul class="mui-table-view tableInfo1" id="inverstBox" > 
+						<!--<li class="my-list-li mui-table-view-cell" stuas="2" href ="myinvestmentlist.html" >
+							<!--<a href="javascript:void(0)">-->
+								<!--<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7">0</span> 
+								<span>F计划</span>-->
+							<!--</a>--> 
+						<!--</li>
+						<li class="my-list-li mui-table-view-cell" stuas="2" href ="myinvestmentlist.html" style="display: none;">
+							<a href="javascript:void(0)">
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7">0</span>
+								<span>股牛宝</span>
+							</a>
+						</li>--> 
+
+				</ul> 
+				</div>
+				
+				<div>
+					<div style="background: #fff;padding:1rem 1.2rem;"id="myMoney" class="c_666 slide">我的理财金
+					<span class="mui-icon mui-icon-arrowdown mui-pull-right c_ccc" ></span>
+					</div>
+					<ul  class="mui-table-view tableInfo">
+						<li class="my-list-li mui-table-view-cell"types="0" href ="myfinancial.html">
+							<a href="javascript:void(0)">
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7" id="preActive"></span>
+								<span class="my-list-text">待激活</span>
+							</a> 
+						</li>
+						<li class="my-list-li mui-table-view-cell" types="1"  href ="myfinancial.html">
+							<!--<a href="javascript:void(0)">-->
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7" id="actived"></span>
+								<span class="my-list-text">可投资</span>
+							<!--</a>-->
+						</li>
+						<li class="my-list-li mui-table-view-cell" types="2" href ="myfinancial.html">
+							<!--<a href="javascript:void(0)">-->
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7"id="hadUse"></span>
+								<span class="my-list-text">收益中</span>
+							<!--</a>-->
+						</li> 
+						<li class="my-list-li mui-table-view-cell" types="3" href ="myfinancial.html">
+							<a href="javascript:void(0)">
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								<span class="mui-pull-right c_ff7" id="earning"></span>
+								<span class="my-list-text">理财金收益</span>
+							</a>  
+						</li>   
+
+				</ul> 
+				</div>
+				
+				<div>
+					<div style="background: #fff;padding:1rem 1.2rem;" id="tradeRcoed" class="c_666 slide">交易记录
+					<span class="mui-icon mui-icon-arrowdown mui-pull-right c_ccc" ></span>
+					</div>   
+					<ul  class="mui-table-view tableInfo"> 
+						<li class="my-list-li mui-table-view-cell"  href ="myinvestment.html">
+							<!--<a href="javascript:void(0)">-->
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							
+								<span class="my-list-text">投资</span>
+							<!--</a>-->
+						</li>
+						<li class="my-list-li mui-table-view-cell" href ="rerecord.html">
+							<!--<a href="javascript:void(0)">-->
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							
+								<span class="my-list-text">充值</span>
+							<!--</a>-->
+						</li>
+						<li class="my-list-li mui-table-view-cell" href ="reflrecord.html">
+							<!--<a href="javascript:void(0)">-->
+								<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+								
+								<span class="my-list-text">提现</span>
+							<!--</a>-->
+						</li>
+						<!--<li class="mui-table-view-cell" href ="">
+							<!--<a href="javascript:void(0)">-->
+								<!--<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>-->
+	 
+								<!--<span class="my-list-text">红包</span>-->
+							<!--</a>-->
+						<!--</li>-->
+
+				</ul> 
+				</div>
+				
+				
+				<!--<ul id="my-list-ul-one" class="mui-table-view">
+					<li class="my-list-li mui-table-view-cell" id="a-myOrders" href ="myinvestment.html">
+						<a href="#">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img id="my-list-image" src="../../../public/img/ze2.png" />
+							<span id="my-list-text">我的投资</span>
+						</a>
+					</li>
+					
+
+					<li class="my-list-li mui-table-view-cell" id="a-mycollection"  href ="traderecord.html">
+						<a href="javascript:void(0)">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img id="my-list-image" src="../../../public/img/ze1.png" />
+							<span id="my-list-text">交易记录</span>
+						</a>
+					</li>
+					<li class="my-list-li mui-table-view-cell" id="a-open" href ="myassets.html">
+						<a href="javascript:void(0)">
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img id="my-list-image" src="../../../public/img/wz.png" />
+							<span id="my-list-text">我的资产</span>
+						</a>
+					</li>
+					
+
+				</ul>  
+				<ul id="my-list-ul-two" class="mui-table-view">
+					
+					<li class="my-list-li mui-table-view-cell" id="a-userInfo"  href ="acuntmanager.html">
+						<a>
+							<span class="mui-icon mui-icon-arrowright mui-pull-right sty" ></span>
+							<img id="my-list-image" src="../../../public/img/ze4.png" />
+							<span id="my-list-text">账户管理</span>
+						</a>
+					</li>
+					
+				</ul>-->
+			</div>
+		</div>
+	</body>
+</html>

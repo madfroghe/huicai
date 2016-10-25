@@ -1,0 +1,35 @@
+.productTitle{
+	
+	padding: 1rem 1rem;
+}
+#bankCard{
+	margin: 1rem auto;
+	width: 98%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding:1rem 1rem ;
+}
+#getNum{
+	margin: 1rem auto 0 auto;
+	width: 98%;
+}
+#checkedNumber{
+	height: 50px;
+	width: 60%;
+}
+#getBtn{
+	width: 40%;
+	height: 50px; 
+}
+/*.mui-table-view-cell{
+	border-bottom: 1px solid #ccc;
+}*/
+.mui-popover {
+	/*bottom: 0;*/
+	top: -10rem;
+	height: 500px;
+}
+.info{
+	border-bottom: 1px solid #ccc;
+	color: #000;
+}

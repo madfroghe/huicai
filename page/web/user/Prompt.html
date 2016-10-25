@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>注册</title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+     <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+//    	$(function(){
+//    		seajs.use("../../../public/js/application/withdraw"); 
+//    	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">温馨提示</h1>
+	</header>
+	<div class="mui-content" >
+		<div style="width: 100%;">
+			<h3 style="color: #FF6600;line-height: 35px;border-bottom: 1px solid #DDDDDD;padding: 10px 20px; ">温馨提示：</h3>
+			<div id="conte" style="width: 100%;padding: 10px 20px;color: #858585;line-height: 30px;">
+				
+			</div>
+		</div>
+	</div>
+	<script>
+	
+			mui.plusReady(function() {
+			var user_id = plus.storage.getItem("user_id");
+			var appkey = plus.storage.getItem("appkey");
+			mui.ajax({
+				type: "get",
+				dataType: "json",
+				url: getUrlParam()+"/prompt",
+				data: {
+					user_id: user_id,
+					appkey: appkey
+				},
+				success: function(data) {
+//				console.log(JSON.stringify(data.data.length)) 
+				html=""
+				for(var i = 0,len = data.data.length;i<len;i++) { 
+				html+=data.data[i];
+				html+='</br>';
+				}
+				mui('#conte')[0].innerHTML= html;
+				
+				}
+
+			})
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+/*首个子页面样式*/
+
+.mui-table-view-cell{
+	padding-left: 0;
+	padding-right: 0;
+	background:#ccc;
+	}
+.productListPanel{margin-top:0px;width: 100%;overflow: hidden;}
+.recommendForYou{
+	border-bottom: 1px solid #ccc;
+	margin-bottom:0rem
+}
+.recommendForYou{
+	background: #FFFFFF;
+	padding-left: 10px;
+	font-size: 0.9rem;
+	height: 3rem;
+	line-height: 1.5rem;
+	margin-top:0.3rem ;
+	color: rgb(130,130,130);
+}
+.recommendForYou>img{
+	width: 24px;
+	height: 24px;
+}
+
+.productMain{
+	/*border-left: 5px solid #FF6600;*/
+	position: relative;
+	/*padding: 0.5rem 0;*/
+	height:8rem;
+	margin:0 0 0.4rem 0; 
+	background: #FFF;
+	width: 100%;
+	}
+.productMain:active{
+	background: rgb(245,245,245);
+}
+.productMain .title{
+	height:1.6rem;
+	/*background:rgb(255,102,0);*/
+	width:56%;
+	padding:0.5rem 0.3rem;
+	position:absolute;
+	top:0px;
+	left:0;
+	text-align: left;
+	line-height: 2rem;
+	/*color:#696969;*/
+	/*font-family: 'iconfont', cursive;*/
+	font-family:arial "微软雅黑"!important;
+	font-size: 1.2rem;
+	/*border-bottom-left-radius: 25%;
+	border-bottom-right-radius: 25%;*/
+}
+
+.productMain .content{
+	/*border-top: 1px solid red;*/
+	text-align: center;
+	
+	height: 100%;  
+}
+.productMain .content .left{
+	/*margin-top:4%;*/
+	padding-top:4.5rem;
+	float: left;
+	/*margin-left:25%;*/
+	width: 33%;
+	height: 100%;
+	/*position: absolute;*/
+}
+
+.productMain .content .center{
+	/*margin-top:4%;*/
+	/*padding-top:5.5rem;*/
+	padding-top:4.5rem;
+	float: left;
+	/*margin-left:6%;*/
+	width: 33%;
+	height: 100%;
+	/*position: relative;*/
+	
+}
+
+.productMain .content .right{
+	float: left;
+	width: 33%;
+	padding-top:4rem;
+	/*margin-left:1% ;
+	height: 50%;*/
+}
+
+
+.status{
+	text-align: center;
+	float: right;
+	margin-right: -35%;
+	margin-top: -32px;
+	font-size: 0.8rem;
+	color: #FFF;
+	width: 60%;
+	/*display: block;*/
+	padding: 1px 0;
+	white-space:nowrap;  
+	background:rgb(126,110,165);
+}
+
+.productMain .content .money{
+	font-size: 1rem;
+	color: #666;
+	display: block;
+	height: 1rem;
+	margin-top:3% ;
+}
+
+.productMain .content .invest{
+	background: rgb(255,102,0);
+}
+
+.productMain .content .time{
+	font-size: 1rem;
+	color: rgb(190,190,190);
+	display: block;height: 1.2rem;
+	margin-top:3% ;
+}
+.productMain .content .time font{
+	/*font-weight: bold;
+	font-size:1rem;*/
+	color: #666;
+}
+
+.productMain .content .introduce{
+	font-size: 0.9rem;
+	color: rgb(190,190,190);
+	margin-top:6%;
+	/*position: absolute;
+	bottom: 9%;    */
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	white-space: nowrap;
+}
+.chart{
+	top: 2.5rem;
+	left:0.2rem;
+	font-size: 2.3rem;
+}
+
+.safety{
+	border-left: 1px solid #ccc;
+	border-right:1px solid #ccc ;
+}
+

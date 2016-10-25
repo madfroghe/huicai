@@ -1,0 +1,15 @@
+.my-list-image {
+	height: 1.5rem;
+	width: 1.5rem;
+	display: inline;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.my-list-text {
+	vertical-align: middle;
+	margin-left: 10px;
+	color: #55585b;
+}
+.mui-table-view-cell{
+	padding: 1rem 0;
+}

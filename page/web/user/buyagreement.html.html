@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+     <script src="../../../public/js/major/jquery.js"></script>
+   <script type="text/javascript">
+   	mui.plusReady(function(){
+   		mui.plusReady(function(){
+			var self = plus.webview.currentWebview();
+			var tag = self.tag;
+			var sub =  mui.preload({
+			    url:tag,
+			    styles:{top: '46px',bottom: '5px'},//窗口参数
+			})
+			self.append(sub);
+		})
+   	})
+   </script>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" style="background-color:#ff7f00 ;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+		<h1 id="heder" class="mui-title "style="color: #FFFFFF;">87汇财投资协议</h1>
+	</header>
+	
+</body>
+</html>

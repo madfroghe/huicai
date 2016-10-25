@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>密码管理</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/pwdmanager.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+   <script type="text/javascript" charset="utf-8">
+//	      	mui.init();
+	      	//打开去投资页面
+	      	
+	      	$(function(){
+	      		seajs.use("../../../public/js/application/pwdmanager_main");
+	      	})
+	      	
+	    </script>
+	    <style> 
+	    	.password{
+	    		width: 95%;
+	    		margin: 10px auto;
+	    		border-radius: 10px;
+	    		border: 1px solid #C0C0C0;
+	    		height: 50px;
+	    		line-height: 50px;
+	    		padding-left: 10px;
+	    	}
+	    	.mui-table-view:before {
+				height: 0px;
+			} 
+
+	    	.mui-table-view:after {
+				height: 0px;
+				
+			}
+  
+	    	.mui-table-view {
+				padding: 10px 0px ;
+			}
+	    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">密码管理</h1>
+	</header>
+	<div style="margin-top:15px;">
+		<div style=" width: 100%;height: 120px;background-color: #ffffff;margin:17% auto;border-radius: 5px;">
+			<ul class="mui-table-view" style="border-bottom: 1px solid #CCCCCC;">
+			<li class="my-list-li mui-table-view-cell" id="loginPwd">
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right sty"  style="color:#bfbfbf ; "></span>
+					<span class="mui-pull-left" >
+						<img src="../../../public/img/yo2.png" width="27rem" alt="" />
+					</span>
+					<span  class="c_639 mui-pull-left" style="color: #000000;margin-top: 0.2rem;margin-left: 1rem;">重置登录密码</span>
+				</a>
+			</li>     
+			<li class="my-list-li mui-table-view-cell" id="passwor">
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right sty"  style="color:#bfbfbf ; "></span>
+					<span class="mui-pull-left" >
+						<img src="../../../public/img/yo3.png" width="27rem"/>
+					</span> 
+					<span  class="c_639 mui-pull-left" id="tradePwd" style="color: #000000;margin-top: 0.2rem;margin-left: 1rem;">交易密码</span>
+				</a>
+			</li> 
+			<!--<li class="my-list-li mui-table-view-cell" id="gesture">
+				<a href="javascript:void(0)">
+					<span class="mui-icon mui-icon-arrowright mui-pull-right sty"  style="color:#bfbfbf ; "></span>
+					<span class="mui-pull-left" style="display: inline-block;" >
+						<img src="../../../public/img/iconfont-shoushi.png" width="23rem" alt="" />
+					</span>
+					<span  class="c_639 mui-pull-left" id="handPwd" style="color: #000000;margin-left: 1rem;">重置手势密码</span>
+				</a>
+			</li>-->
+		</ul>
+		<!--<ul class="mui-table-view" >
+					<li class="mui-table-view-cell mui-collapse"  style="color:#bfbfbf ; ">
+						<a class="mui-navigate-right"style="color: #000000;" href="#">
+							
+						<span class="mui-icon mui-icon-locked c_639"></span>	
+							支付密码</a>
+						<div class="mui-collapse-content">-->
+						<!--<div class="passwordd" style="width: 90%;float: right;border-radius: 10px;border: 1px solid #C0C0C0;">
+								<div class="password" id="passwor" style="color: #000000;">
+									
+									
+									<span class="mui-icon mui-icon-locked c_639"></span>
+									数字密码
+									<font size="4" color="ea653c" style="float: right;line-height: 45px;">» &#160;&#160;</font>
+									
+								</div>-->
+								<!--</a>-->
+								<!--<div class="password" id="gesture" style="color: #000000;">
+									<span class="mui-icon mui-icon-locked"></span>
+									手势密码
+									<font size="4" color="ea653c" style="float: right;line-height: 45px;">» &#160;&#160;</font>
+								</div>-->
+								<!--<div class="password">
+									<span class="mui-icon mui-icon-locked"></span>
+									指纹密码
+									<font size="4" color="ea653c" style="float: right;line-height: 45px;">» &#160;&#160;</font>
+								</div>
+								<div class="password">
+									<span class="mui-icon mui-icon-locked"></span>
+									脸谱密码
+									<font size="4" color="ea653c" style="float: right;line-height: 45px;">» &#160;&#160;</font>
+								</div>-->
+						<!--</div>
+						</div>
+					</li>
+					</ul>-->
+		
+			
+			
+		</div>
+		
+		
+		
+	</div>
+	
+	<!--<nav class="mui-bar mui-bar-tab">
+		 <a class="mui-tab-item mui-active" id="index_main.html" href="page/web/user/index_main.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" id="invest_main.html" href="page/web/user/invest_main.html">
+			<span class="mui-icon mui-icon-chatboxes"></span>
+			<span class="mui-tab-label">投资理财</span>
+		</a>
+		<a class="mui-tab-item" id="myacount.html" href="page/web/user/myacount.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">我的账户</span>
+		</a>
+		<a class="mui-tab-item" id="more_main.html" href="page/web/user/more_main.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+</nav>-->
+</body>
+</html>

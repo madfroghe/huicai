@@ -1,0 +1,31 @@
+.productTitle{
+	padding: 1rem 1rem;
+}
+#bankInfo{
+	padding: 1rem;
+}
+
+.userInfo{
+	padding: 0.3rem 1rem;
+}
+.userInfo>input{
+	height: 50px;
+}
+#getNum{
+	/*margin: 1rem auto;*/
+	width: 100%;
+}
+#checkedNumber{
+	height: 40px;
+	width: 60%;
+}
+#getBtn{
+	width: 40%;
+	height: 40px;
+	border: none;
+	
+}
+
+.dateTime>input{
+	width: 48%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>充值提现</title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/rech_refl.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/rech-refl_main");
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">充值提现</h1>
+	</header>
+	<div class="mui-content">
+		<div class="avaribleMoney tc">
+			<p >
+			<h4 class="c_ff6">可用余额</h4>
+			<span class="c_c22 f18" id="avaribel">10003</span>	
+			</p>
+			<div class="tc">
+				<button id="recharge">充值</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="mui-btn bg_ff6 c_fff" id="withdr_w">提现</button>
+			</div>
+			
+			
+		</div>
+		<div>
+			<ul class="mui-table-view">
+			  <li class="mui-table-view-cell" href="reflrecord.html">
+			    <a class="mui-navigate-right">
+			     	 提现记录
+			    </a>
+			  </li>
+			  <li class="mui-table-view-cell" flag='1' href="rerecord.html">
+			    <a class="mui-navigate-right">
+			     	 充值记录
+			    </a>
+			  </li>
+			</ul>
+
+		</div>
+	</div>
+</body>
+</html>

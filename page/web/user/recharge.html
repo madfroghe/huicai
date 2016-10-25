@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>充值</title>
+		 <script src="../../../public/js/major/mui.min.js"></script>
+	    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+	     <link href="../../../css/font-awesome.min.css" rel="stylesheet"/>
+	 	<link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="../../../Style/css/pages/recharge.css" />
+	     <script src="../../../public/js/major/jquery.js"></script>
+	      <script src="../../../public/js/major/template.js"></script>
+	    <script src="../../../public/js/major/config.js"></script>
+	    <script src="../../../public/js/major/common.js"></script>
+	     <script src="../../../public/js/application/recharge.js"></script>
+	</head> 
+	<body>  
+		<header class="mui-bar mui-bar-nav">
+			<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-arrowleft"></a>
+			<h1 class="mui-title">充值</h1>
+		</header>  
+		<div class="mui-content" >
+			<!--未添加银行卡-->
+			<div id="addCard" >
+				<h5 class="f15">您当前未添加银行卡</h5>
+				<div id="addBtn" class="tc bg_f" style="width: 100%;text-align: center; margin: 1rem auto;padding: 20px 0;border-radius: 5px;">
+					<div><i class="fa fa-plus-circle c_ff7" style="font-size: 2.5rem;"></i></div>
+					<div class="c_999">添加银行卡</div>
+				</div> 
+			</div>
+			<!--已添加-->
+			<div id="already">
+				<div id="cardInfo" style="display: none;"></div>
+				<script type="text/html" id="template">
+					<div class="clearfix">
+						<h5 class="mui-pull-left f15 c_fff">{{bankName}}</h5>
+						<h5 class="mui-pull-right f15 c_fff">绑定手机:{{telephone}}</h5>
+					</div>
+					<div class="clearfix" style="margin-top: 0.5rem;">
+						<p class="mui-pull-left f15 c_fff">{{cardNum}}</p>
+						<p class="mui-pull-right f15 c_fff">绑定时间:{{createTime}}</p>
+					</div>
+				</script>
+				<!--<h5 style="margin: 0.5rem 0 2rem 0;">*单次限额5000元/笔,月度限额20,000元</h5>-->
+				<div class="mui-input-row bor" style="height: 55px;background: #fff;border-radius: 5px;margin: 2rem 0 1rem 0;">
+					<label class="c_666" style="width: 30%;height: 100%; padding: 20px 10px;">
+					充值金额</label>
+					<!--<input type="number" id="rechargeMoney" placeholder="请输入充值金额" onkeyup="if(isNaN(value))execCommand('Delete')" onafterpaste="if(isNaN(value))execCommand('Delete')" style="width: 70%;height: 100%;" />-->
+					<input style="width: 70%;height: 100%;"  id='amountMoney' onkeyup="if(isNaN(value))execCommand('Delete')" onafterpaste="if(isNaN(value))execCommand('Delete')" type="number" class=" mui-input f14 c_999" placeholder="请输入充值金额">
+				</div>
+				<button id="rechargeBtn"  disabled="disabled" class="mui-btn mui-btn-block c_ff7">充值</button>
+			</div>
+		</div>
+		<div id="formBox">
+				
+			</div>
+	</body>
+</html>

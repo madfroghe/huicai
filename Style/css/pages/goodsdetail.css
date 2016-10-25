@@ -1,0 +1,23 @@
+.investInfo>div{
+	text-align: center;
+	margin-left: 4%;
+	
+}
+.mui-control-content {
+	background-color: white;
+	min-height: 25.8rem
+}
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+/*产品详情*/
+.titleInfo{
+	border-bottom: 1px solid #ccc;
+}
+.goodsInfo{
+	/*text-align: center;*/
+	padding-left: 1.5rem;
+}
+.shouyi{
+	margin-left: 4%;
+}

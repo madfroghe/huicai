@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+   <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+	<script src="../../../public/js/major/sea/sea.js"></script>
+	 <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		seajs.use("../../../public/js/application/approve_main");
+      	})
+    </script>
+    <style> 
+    body{
+    	background-color: #CCCCCC;
+    }
+    .datu{
+    	border-bottom: 1px solid #C7C7CC;
+    	height: 50px;
+    }
+    .datu1{
+    	border-bottom: 0px solid #C7C7CC;
+    	height: 50px;
+    }
+    .datu>label{
+    	text-align: left;
+    	padding: 0px; 
+    	/*background-color: red;*/
+    	height: 50px;
+    	line-height: 50px;
+    }
+    .datu>input[type='text']{
+    	/*background-color: royalblue;*/
+    	height: 50px;
+    }
+    #butto{
+    	width: 90%;
+    	height: 50px;
+    	background-color: #ff6600;
+    	margin-left: 5%;
+    	float: left;
+    	border-radius: 10px;
+    	font-size: 20px;
+    	color: #f1d8d0;
+    	line-height: 50px;
+    	text-align: center;
+    }
+    .appro{
+    	width: 40%;
+    	height: 80px;
+    	float: left;
+    	margin:20px 5%;
+    	background-color: #ebc5b9;
+    	border-radius: 10px;
+    }
+    .appr1{
+    	float: left;
+    	background: url(../../../public/img/f.jpg) no-repeat;
+    	background-size: 100% 100%;
+    } 
+    .appr2{
+    	float: right;
+    	background: url(../../../public/img/z.jpg) no-repeat;
+    	background-size: 100% 100%;
+    }
+    </style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" >
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #FFFFFF;"></a>
+			<h1 class="mui-title "style="color: #FFFFFF;">实名认证</h1>
+	</header>
+	<div class="mui-content" style=" padding: 0px 10px; margin-top: 60px;">
+		<div class="mui-input-row datu">
+				<label>真实姓名:</label>
+				<input type="text" id="userName" class="mui-input-clear" placeholder="输入姓名">
+		</div>
+		 
+		
+		<div class="mui-input-row datu datu1">
+				<label>身份证号码:</label>
+				<input type="text" id="idCard" class="mui-input-clear" placeholder="请输入二代身份证号">
+		</div>
+		<div>
+			
+		</div>
+	<a href="#photo">
+	<div class="appro appr1">
+		<img id="userPhoto" src="" style="width: 100%;height: 100%;"/>
+	</div>	
+	</a>
+	<!--<div class="">
+		<span style="display: inline-block;" class="mui-pull-left">+</span>
+	</div>-->
+	
+	<a href="#photo2"> 
+	<div class="appro appr2">
+		<img id="userPhoto2" src="" style="width: 100%;height: 100%;"/>
+	</div>	
+	</a>   
+	<!--<div class="appro appr2"></div>-->	
+	
+	<p class="mui-pull-left c_c22" style="margin-left: 25%;">*请上传小于2M的图片</p>
+<div id="butto">确定</div> 
+</div> 
+<div id="photo" class="mui-popover mui-popover-action mui-popover-bottom">
+	  <ul class="mui-table-view">
+	    <li id="photoCamera" class="mui-table-view-cell">拍照</li>
+	    <li id="photoGallery" class="mui-table-view-cell">相册选择</li>
+	    <li id="photoChanel" class="mui-table-view-cell">取消</li>
+	  </ul>  
+	</div>
+<div id="photo2" class="mui-popover mui-popover-action mui-popover-bottom">
+	  <ul class="mui-table-view">
+	    <li id="photoCamera2" class="mui-table-view-cell">拍照</li>
+	    <li id="photoGallery2" class="mui-table-view-cell">相册选择</li>
+	    <li id="photoChanel2" class="mui-table-view-cell">取消</li>
+	  </ul>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

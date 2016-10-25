@@ -1,0 +1,67 @@
+.mui-bar-nav{
+	box-shadow: none;
+}
+#title{
+	color: #666666;
+	padding: 0.5rem 22%;
+	/*border-bottom: 4px solid #DDDDDD;*/
+	width: 100%;
+}
+#title span{
+	margin-right: 0.5rem;
+	margin-top: 0.5rem;
+}
+#title h5{
+	font-size: 1rem;
+}
+#iconBox>div{
+	width: 25%;
+	float: left;
+}
+#iconBox{
+	/*border-top: 4px solid #DDDDDD;*/
+	padding: 1rem 0;
+}
+.bordr_line{
+	border-left: 2px solid #FF7F00;
+}
+
+.disNone{
+	margin-top: 2.5rem;
+}
+.disBorder{
+	border-bottom: 1px solid #ccc;
+}
+.mui-active{
+	background-color:red;
+}
+
+/*分类样式*/
+.classTitle{
+	/*border: 1px solid #ccc;*/
+	width: 100%;
+	/*padding:1rem 5% 0 5% ;*/
+	/*padding-top: 1rem;*/
+	height: 2rem;
+	/*padding-left: 5rem;*/
+	text-align: center;
+}
+.classTitle>button{
+	/*border: 1px solid #ccc;*/
+	/*border-radius: 5px;*/
+	/*height: 100%;*/
+	padding: 0.8rem 0;
+	border: none;
+	width: 25%;
+	margin: 0 auto;
+	text-align: center;
+	/*margin-left: 2%;*/
+}
+.classTitle>div:first-child{
+	/*margin-left: 21%;*/
+}
+.active{
+	color:#fff;
+	background: #FF6600;
+	border: 1px solid #fff;
+}

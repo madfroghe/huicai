@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/register.css" />
+     <link rel="stylesheet" href="../../../Style/css/pages/passwo.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+      		
+      	});
+      	mui.plusReady(function(){
+      		mui("#giveUp")[0].addEventListener("tap",function(){
+      			
+      			mui.openWindow({
+      				url:"myinvestment.html",
+      				id:"myinvestment.html",
+      				styles:{
+      					top:0,
+      					bottom:0
+      				}
+      			})
+      			setTimeout(function(){
+      				var webviews = plus.webview.all();
+		    	  mui.each(webviews,function(i,item){
+		    	 	if(
+		    	 		item.getURL().indexOf("index_main.html")>0
+		    	 	  ||item.getURL().indexOf("a_invest_main.html")>0
+		    	 	  ||(item.getURL().indexOf("goodsdetail.html")>0)
+		    	 	   ||item.getURL().indexOf("more_main.html")>0
+		    	 	  ||item.getURL().indexOf("myinvest.html")>0
+		    	 	  ||item.getURL().indexOf("investfalse.html")>0
+		    	 	  ||item.getURL().indexOf("investsuccess.html")>0
+		    	 	){
+		    	 		item.hide();
+		    	 	}
+		    	 });
+		    	 var detailPage = null;
+		    	 if(!detailPage){
+				    detailPage = plus.webview.getLaunchWebview();
+				 }
+					mui.fire(detailPage,"tabChange",{id:"invest_home.html"});
+      			},1000)
+      			
+    
+      		})
+      		mui("#continue")[0].addEventListener("tap",function(){
+      			var webviews = plus.webview.all();
+      			
+      			var detailPage = null;
+		    	 if(!detailPage){
+				    detailPage = plus.webview.getLaunchWebview();
+				 }
+				mui.fire(detailPage,"tabChange",{id:"invest_home.html"});
+      			plus.webview.getWebviewById("invest_home.html").show();
+      			setTimeout(function(){
+      				mui.each(webviews,function(i,item){
+		    	 	if(
+		    	 		item.getURL().indexOf("index_main.html")>0
+		    	 	  ||item.getURL().indexOf("a_invest_main.html")>0
+		    	 	  ||(item.getURL().indexOf("goodsdetail.html")>0)
+		    	 	  ||item.getURL().indexOf("more_main.html")>0
+		    	 	  ||item.getURL().indexOf("myinvest.html")>0
+		    	 	  ||item.getURL().indexOf("investfalse.html")>0
+		    	 	  ||item.getURL().indexOf("investsuccess.html")>0
+		    	 	){
+		    	 		item.hide();
+		    	 	}
+		    	 });
+      			},500)
+		    	  
+      		})
+      		
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">投资成功</h1>
+	</header>
+	<div class="mui-content tc">
+		<div class="tc" style="width:80%;margin: 25% auto;">
+			<img src="../../../public/img/true.png" width="30%" alt="" />
+			<div class="c_ff6" style="margin-top: 0.5rem;">恭喜您，投资成功</div>
+			<div class="clearfix" style="margin-top: 1rem;width: 100%;padding: 0 1rem;">
+				<button class="mui-btn mui-pull-left c_fff bg_ff6" id="giveUp" style="width: 90px;height: 35px;">查看记录</button>
+				<button class="mui-btn c_fff mui-pull-right bg_ff6" id="continue" style="width: 90px;height: 35px;">继续投资</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

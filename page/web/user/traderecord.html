@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+     <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="../../../Style/css/pages/myassets.css" />-->
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script src="../../../public/js/major/sea/sea.js"></script>
+    <script src="../../../public/js/major/config.js"></script>
+		<style>
+			body,.mui-content{
+				background: #FFF;
+			}
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.mui-control-content {
+				height:100%; 
+				/*float: left;
+				border: 1px solid red;*/
+			} 
+			.mui-table-view-cell{
+				padding-top:0; 
+				padding-bottom: 0;
+				border: none;
+				background: none;
+			}
+			.mui-table-view-cell:before{
+				content: none;
+			}
+			.mui-table-view-cell:after{
+				content: none;
+			}
+			.timeBase{
+				height: 60px;
+			}
+			.timeBase .send {
+			float: left;
+			position:relative;
+			width:180px;
+			height:40px;
+			line-height: 40px;
+			margin:10px 0 0 20px;
+			padding-left: 10px;
+			border:1px solid #F8C301;
+			border-radius:5px; /* 圆角 */
+			}
+			
+			.timeBase .send .arrow {
+			position:absolute;
+			top:8px;
+			left:-20px; /* 圆角的位置需要细心调试哦 */
+			width:0;
+			height:0;
+			font-size:0;
+			border:solid 10px;
+			border-color:rgba(0,0,0,0) #F8C301 rgba(0,0,0,0) rgba(0,0,0,0);
+			}
+			.timeBase .rido{
+				position:relative;
+				float: left;
+				text-align: right;
+				margin:10px 10px 0 0;
+				height: 45px;
+				width: 50px;
+				line-height: 40px;
+			}
+			.timeBase .rido_icon{
+				position:relative;
+				float: left;
+				z-index: 5;
+				height: auto;
+				line-height:60px;
+				color: blue;
+				font-size:2.4rem ;
+			}
+			
+			.timeBase .box:before {
+				position: absolute;
+				z-index: -1;
+			    content: "";
+			    display: block;
+			    height: 60px;
+			    margin-left: 47.5%;
+			    border-left: 2px solid #666;
+			}
+		</style>
+	</head>
+	<body style="height: 100%;">
+		<header class="mui-bar mui-bar-nav">
+			<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">交易记录</h1>
+			<!--<span class="mui-pull-right recharge c_fff" id="recharge" style="margin-top: 0.8rem;">充值提现</span>-->
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px 0 10px;">
+				<div id="sliderSegmentedType"  class="mui-slider-indicator mui-segmented-control ">
+					<a type="0" class="mui-control-item mui-active" href="javaScript:void(0)">
+						全部
+					</a>
+					<a type="1" class="mui-control-item" href="javaScript:void(0)">
+						充值
+					</a>
+					<a type="2" class="mui-control-item" href="javaScript:void(0)">
+						提现
+					</a>
+					<a type="3" class="mui-control-item" href="javaScript:void(0)">
+						投资
+					</a>
+					<a type="4" class="mui-control-item" href="javaScript:void(0)">
+						红包
+					</a>
+				</div>
+			</div>
+
+			<div style="padding: 10px 10px;"><!--mui-segmented-control-inverted-->
+				<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted">
+					  
+				</div>
+			</div>
+			<div id="segmentedChild" >
+				
+			</div>
+		</div>
+		
+		<script type="text/template" id="tabFather">
+			<a class="mui-control-item {isActive}" href="#item{key}">
+				{key} 
+			</a>
+		</script>
+		
+		<script type="text/template" id="tabChild">
+			<div id="item{key}" class="mui-control-content {isActive}">
+				<div  class=" mui-block">
+					<div class="mui-scroll">
+						<ul class="mui-table-view">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+		
+		<script type="text/template" id="tabChildLi">
+			<li id="{id}" type="{typeId}" class="mui-table-view-cell" >
+					<div class="timeBase">
+						<div id="rido" class="rido">{md}</div>
+						<div class="rido_icon box" style="color:{color}">●</div>
+						<div class="send">
+							{type}&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:{color}">{trdeMoney}</span>
+							<div class="arrow">
+							</div>
+						</div> 
+					</div>
+			</li>
+		</script>
+		
+		<script src="js/mui.min.js"></script>
+		<script>
+		window.addEventListener('reLode',function(){
+			window.location.reload();
+		})
+			mui.init({
+				swipeBack:true, //启用右滑关闭功能
+//				pullRefresh: {
+//					container: '#segmentedChild',
+//					up: {
+//						contentrefresh: '正在加载...',
+//						callback: pageRander
+//					}
+//				}
+			});
+			mui.plusReady(function(){
+				mui('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+//				setTimeout(function(){
+//					mui('#segmentedChild').pullRefresh().pullupLoading();
+//				},300);
+				//通过类型筛选条件
+				mui("#sliderSegmentedType").on("tap",".mui-control-item",function(e){
+					var type = this.getAttribute("type");
+					var list = document.getElementsByClassName("mui-table-view-cell");
+					if(type== 0){
+						//全部显示
+						for(var i= 0 ;i<list.length;i++){
+							list[i].style.display="block";
+							console.log(i);
+						}
+					}else{
+						//线隐藏其他 显示当前类型
+						for(var i= 0 ;i<list.length;i++){
+							list[i].style.display="none";
+						}
+						for(var i= 0 ;i<list.length;i++){
+							if(type==list[i].getAttribute("type")){
+								list[i].style.display="block";
+							}
+						}
+					}
+				})
+				//ajaX
+					pageRander();
+				})
+				
+				function pageRander(){
+					
+						var type=0
+				var user_id = plus.storage.getItem("user_id");
+		 		var appkey = plus.storage.getItem("appkey");
+		 		var datas = {"user_id":user_id,"appkey":appkey,"pagesize":10,"type":type};
+			 	var url = getUrlParam()+"/trdeRecord";//交易记录Url
+//			 	 var json=myAjax(url,datas,"get","traderecord.html")
+			 	 $.ajax({
+						type: "get",
+						contentType:"application/json",
+						dataType:"json",
+					  	url:url,
+				    	data:datas,
+				    	success: function(msg){
+				    		console.log(JSON.stringify(msg))
+				    	mui.toast(msg.msg)
+				    		if(msg.status==1){
+				    			if(msg.data==null){
+				    				mui.toast("亲，您暂时无记录")
+				    			}else{
+					    			//重组数据
+					    			var data = msg.data;
+									var hash = {};
+								    var result = [];
+								    for (var i = 0, elem;i<data.length &&(elem = new Date(data[i].trdeTime.replace(/-/g, "/")).getFullYear()) != null; i++) {
+								        var obj = {};
+								        if (!hash[elem]) {
+								            hash[elem] = true;
+								            var obj = {};
+									   		obj.key = elem;
+									   		obj.value = [];
+									   		for(var j in data){ 
+									   			if( new Date (data[j].trdeTime.replace(/-/g, "/")).getFullYear()==elem){
+									   				obj.value.push(data[j]);
+									   			}
+									   		} 
+									   		result.push(obj);
+								        }
+								    }
+								    //通过组织数据 填充页面
+								    for(var i in result){
+								    	var item = result[i];
+								    	//组装TAb选项卡
+								    	if(i==0){item.isActive = "mui-active"};
+								   		var html = document.getElementById("tabFather").innerHTML;
+								        mui("#segmentedControl")[0].innerHTML +=formatTemplate(item,html);
+								        
+								        //组装选项卡下子容器
+								        var html2 = document.getElementById("tabChild").innerHTML;
+								        mui("#segmentedChild")[0].innerHTML +=formatTemplate(item,html2);  
+								   		
+								   		//组装自容器li集合
+								   		var html3 = document.getElementById("tabChildLi").innerHTML;
+	//							   		setTimeout(function(){
+								   		for(var j in item.value){
+								   			var itemdate = new Date(item.value[j].trdeTime.replace(/-/g, "/")); 
+								   			var month = itemdate.getMonth()+1>=10?itemdate.getMonth()+1:"0"+(itemdate.getMonth()+1);
+								   			var date  = itemdate.getDate()>=10?itemdate.getDate():("0"+itemdate.getDate());
+								   			item.value[j].md = month+"-"+date;
+								   			item.value[j].type = getType(item.value[j].typeId);
+								   			item.value[j].color = getColor(item.value[j].trdeMoney);
+								   			item.value[j].trdeMoney =item.value[j].trdeMoney>0?"+"+item.value[j].trdeMoney:item.value[j].trdeMoney;
+								   			mui("#item"+item.key)[0].getElementsByTagName("ul")[0].innerHTML +=formatTemplate(item.value[j],html3);
+								   		}
+	//							   		},500)
+								    }   
+								}
+				    			
+				    		}else{
+				    			if(msg.msg=="唯一码失效，请重新登录"){
+			//	    				mui.toast("请登录后操作")
+					    				mui.openWindow({
+											id: "login.html",
+											url: "login.html",
+											styles: {
+											top: '0',
+											bottom: '0'
+											
+										},
+										extras:{pageId:"traderecord.html"}
+										})
+					    			}
+					    			mui.toast(msg.msg);
+				    		}
+				    		console.log(JSON.stringify(msg));
+				    	},error:function(a,b,c){
+				    		var btnArray = ['重新加载','取消'];
+							mui.confirm('耽误您的时间，我们深感抱歉', '提示', btnArray, function(e) {
+								if (e.index == 0) {
+									window.location.reload();
+								}
+							})
+				    	}
+					});
+					
+				}
+				/**
+				 * 定义建议模板解析
+				 * @param {Object} dta
+				 * @param {Object} tmpl
+				 */
+				function formatTemplate(dta, tmpl) {  
+				    var format = {  
+				        name: function(x) {  
+				            return x  
+				        }  
+				    };  
+				    return tmpl.replace(/{(\w+)}/g, function(m1, m2) {  
+				        if (!m2)  
+				            return "";  
+				        return (format && format[m2]) ? format[m2](dta[m2]) : dta[m2];  
+				    });  
+				}  
+				
+				function getType(typeId){
+					switch (typeId){
+						case 0:
+							return '全部';
+						case 1:
+							return '充值';
+						case 2:
+							return '提现';
+						case 3:
+							return '投资';
+						case 4:
+							return '红包';
+					}
+				}
+				
+				function getColor(trdeMoney){
+					if(trdeMoney>0){
+						return "red";
+					}else{
+						return "green";
+					}
+				}
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+.mui-bar-nav{
+	box-shadow: none;
+}
+#personal-money{
+	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+.mui-table-view{
+	margin-bottom: 1rem;
+}
+#sure,#cancel{
+	background: #fdd23e;
+	border: none;
+	width: 30%;
+	
+}
+#cancel{
+	margin-left: 3%;
+}
+.mui-table-view-cell{
+	padding: 0.8rem;
+}

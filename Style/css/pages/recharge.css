@@ -1,0 +1,22 @@
+#addCard>h5{
+	text-align: center;
+	padding: 1rem 0.5rem;
+}
+#addCard{
+	display: none;
+}
+
+#already{
+	display:block;
+	width: 95%;
+	margin: 2rem auto;
+	
+}
+#cardInfo{
+	background: #FF7F00;
+	padding: 1rem;
+	border-radius: 5px;
+}
+#rechargeBtn{
+	margin-top: 1rem;
+}

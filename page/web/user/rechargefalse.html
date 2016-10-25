@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../public/js/major/mui.min.js"></script>
+    <link href="../../../Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/composition.css" rel="stylesheet"/>
+    <link href="../../../Style/css/common/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../../Style/css/pages/register.css" />
+     <link rel="stylesheet" href="../../../Style/css/pages/passwo.css" />
+    <script src="../../../public/js/major/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		mui("#giveUp")[0].addEventListener("tap",function(){
+				var webviews = plus.webview.all();
+		    	  mui.each(webviews,function(i,item){
+		    	 	if(
+		    	 		item.getURL().indexOf("invest_home.html")>0
+		    	 	  ||item.getURL().indexOf("myacount.html")>0
+		    	 	  ||(item.getURL().indexOf("recharge.html")>0)
+		    	 	  ||(item.getURL().indexOf("shengfutong.html")>0)
+		    	 	  ||(item.getURL().indexOf("pay.html")>0)
+		    	 	  ||item.getURL().indexOf("rechargefalse.html")>0
+		    	 	){
+		    	 		item.close();
+		    	 	}
+		    	 });
+		    	  var detailPage = null;
+		    	 if(!detailPage){
+				    detailPage = plus.webview.getLaunchWebview();
+				 }
+		    	 plus.webview.getWebviewById("index_main.html").show();
+				mui.fire(detailPage,"tabChange",{id:"index_main.html"});
+      		})
+      		mui("#continue")[0].addEventListener("tap",function(){
+      			
+      			mui.openWindow({
+      				url:"pay.html",
+      				id:"pay.html",
+      				styles:{
+      					top:0,
+      					bottom:0
+      				},
+      				 createNew:true
+      			})
+      			setTimeout(function(){
+      				var webviews = plus.webview.all();
+		    	  mui.each(webviews,function(i,item){
+		    	 	if(
+		    	 		item.getURL().indexOf("invest_main.html")>0
+		    	 	  ||item.getURL().indexOf("myacount.html")>0
+		    	 	  ||(item.getURL().indexOf("recharge.html")>0)
+		    	 	  ||(item.getURL().indexOf("shengfutong.html")>0)
+		    	 	  ||item.getURL().indexOf("rechargefalse.html")>0
+		    	 	){
+		    	 		item.hide();
+		    	 	}
+		    	 });
+		    	 var detailPage = null;
+		    	 if(!detailPage){
+				    detailPage = plus.webview.getLaunchWebview();
+				 }
+				mui.fire(detailPage,"tabChange",{id:"index_main.html"});
+      			},1000)
+      			
+      			 
+      		})
+      		
+      	})
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<!--<a style="color: #FFFFFF;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+		<h1 class="mui-title">充值失败</h1>
+	</header>
+	<div class="mui-content tc">
+		<div class="tc" style="width:80%;margin: 25% auto;">
+			<img src="../../../public/img/false.png" width="30%" alt="" />
+			<div class="c_ff6" style="margin-top: 0.5rem;">很抱歉，充值失败</div>
+			<div class="clearfix" style="margin-top: 1rem;width: 100%;padding: 0 1rem;">
+				<button class="mui-btn mui-pull-left c_fff bg_ff6" id="giveUp" style="width: 90px;height: 35px;">放弃充值</button>
+				<button class="mui-btn c_fff mui-pull-right bg_ff6" id="continue" style="width: 90px;height: 35px;">重新尝试</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

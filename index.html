@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <script src="public/js/major/mui.min.js"></script>
+    <link href="Style/css/common/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="Style/css/pages/index.css" />
+    <script href="public/js/application/share.js"></script>
+     <script href="public/js/application/immersed.js"></script>
+    <script src="public/js/major/jquery.js"></script>
+    <script src="public/js/major/sea/sea.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    
+      	$(function(){
+      		
+			// 加载入口模块
+			seajs.use("./public/js/application/index");
+		});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+  		<span id="myShare" class=" mui-pull-right c_fff" id="sharepage.html" href="page/web/user/sharepage.html" style="color: #fff;margin-top: 3%;display: none;">
+  			<img src="public/img/shareimg.png" alt="" width="60%" />
+  		</span>
+          <h1 class="mui-title" style="font-size: 1.2rem;" id="title">87汇财</h1>
+	</header>
+	<div style="display: none;">
+		<p class="heading">分享内容：</p>
+		<textarea id="sharecontent" rows="2" cols="15"> </textarea>
+		<img id="pic" src="" style="display: none;"/>
+	</div>          
+	<nav class="mui-bar mui-bar-tab" id="mynav" style="background-color: #f4f2f3;">
+		 <a class="mui-tab-item index_main" id="index_main.html" href="page/web/user/index_main.html">
+			<span class="mui-icon"> 
+				<img src="public/img/zx.png" style="width: 25px;height: 25px; display: none;" alt="" />
+				<img src="public/img/zxx.png" style="width: 25px;height: 25px;" alt="" />
+			</span>   
+			<span class="mui-tab-label">87汇财</span>
+		</a>     
+		<a class="mui-tab-item invest" id="invest_home.html" href="page/web/user/invest_home.html">
+			<span class="mui-icon">   
+				<img src="public/img/zx1.png" style="width: 25px;height: 25px;" alt="" />
+				<img src="public/img/zxx1.png" style="width: 25px;height: 25px;display: none;" alt="" />
+			</span> 
+			<span class="mui-tab-label">投资理财</span>
+		</a>
+		<a class="mui-tab-item myacount" id="myacount.html" href="page/web/user/myacount.html">
+<span class="mui-icon">
+	<img src="public/img/zx2.png" style="width: 25px;height: 25px;" alt="" />
+	<img src="public/img/zxx2.png" style="width: 25px;height: 25px;display: none;" alt="" />
+</span> 
+			<span class="mui-tab-label">我的账户</span>
+		</a>    
+		<a class="mui-tab-item mores" id="more_main.html" href="page/web/user/more_main.html">
+<span class="mui-icon">
+	<img src="public/img/zx3.png" style="width: 25px;height: 25px;" alt="" />
+	<img src="public/img/zxx3.png" style="width: 25px;height: 25px; display: none;" alt="" />
+</span>
+			<span class="mui-tab-label">更多</span>
+		</a>
+</nav>
+
+</body>
+</html>

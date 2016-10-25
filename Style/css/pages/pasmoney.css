@@ -1,0 +1,12 @@
+.mui-table-view-cell:after{
+	height: 0;
+}
+.info1{
+	border-top: 2px solid #FF6600;
+}
+.info{
+	margin-top: 0.5rem;
+	background: #fff;
+	padding: 1rem 1.3rem;
+	/*border: 1px solid red;*/
+}

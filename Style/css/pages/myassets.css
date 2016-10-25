@@ -1,0 +1,55 @@
+/*总资产样式*/
+#total{
+	padding: 1rem;
+	/*border-bottom: 1px solid #ccc;*/
+}
+.acountInfo{
+	/*border: 1px solid red;*/
+	padding: 0;
+}
+.acountInfo>div{
+	color: #fff;
+	background: ;
+	/*border: 1px solid #FF6600;*/
+	 /*border-top: 8px solid #FF6600;*/
+	 /*border-radius:5px ;*/
+	/*margin: 0.8rem auto;*/
+	padding:1.5rem 0 ;
+	width: 50%;
+	/*margin-left: 3%;*/
+	/*border: 1px solid #ccc;*/
+	/*height: 5rem;*/
+}
+.mui-bar:after{
+	height: 0;
+}
+.mui-bar-nav:after{
+	height: 0;
+}
+#waitMoney,#availableMoney{
+	font-weight: bolder;
+	color: #fff;
+}
+.withdraw{
+	padding: 2.2rem 0;
+}
+#free{
+	font-weight: bolder;
+	font-size: 2.5rem;
+	line-height: 2rem;
+}
+.btn{
+	
+}
+.mui-bar-nav{
+	box-shadow: none;
+}
+.btn button{
+	width: 6rem;
+	height: 2.3rem;
+	
+}
+#draw{
+	margin-left: 1.3rem;
+}
+
